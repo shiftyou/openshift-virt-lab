@@ -58,7 +58,8 @@
 
 ### 3.1 VMware 환경 리뷰
 
-1. 해당 VMware [포탈](https://portal.vc.opentlc.com)로 이동합니다.
+1. 제공 받은 vCenter Console 접속 정보를 확인하여 포털에 접속합니다.
+   주소는 `vcsrsxx`으로 시작합니다.
 
    **VSPHERE CLIENT 시작**을 누릅니다.<br>
    <img src="lab-images/vm_migration--3.1.1.1_vSphere_client.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
@@ -67,7 +68,7 @@
    <img src="lab-images/vm_migration--3.1.1.2_input_id_pw.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
 <br>
 
-2. **VM** 탭을 선택하여 가상머신 리스트를 확인합니다.
+3. **VM** 탭을 선택하여 가상머신 리스트를 확인합니다.
 
    <img src="lab-images/vm_migration--3.1.2_vSphere_VM_List.png" title="100px" alt="vSphere의 가상머신 리스트"></img> <br> 
 

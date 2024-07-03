@@ -162,7 +162,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 6. `nproc` 및 `free -m` 명령을 사용하여 가상머신과 연결된 CPU 수 및 메모리 양(생성 중에 지정된 flavor와 일치)을 검사합니다.
 
-   <img src="lab-images/new_images/19_fedora_resources.png" title="100px" alt="페도라 가상머신 CPU/MEM 확인"></img> <br> 
+   <img src="new_images/19_fedora_resources.png" title="100px" alt="페도라 가상머신 CPU/MEM 확인"></img> <br> 
 <br>
 
 7. 게스트 사용자 정의를 검토하려면 `cloud-init` 디스크를 마운트합니다.

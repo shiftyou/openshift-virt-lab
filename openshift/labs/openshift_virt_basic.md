@@ -147,14 +147,14 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 4. 로그인한 후 `ip a` 명령을 실행하여 인터페이스와 IP 주소를 표시합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.4_Fedora_Network.png" title="100px" alt="페도라 가상머신 IP 주소 확인"></img> <br> 
+   <img src="new_images/17_fedora_ipa_command.png" title="100px" alt="페도라 가상머신 IP 주소 확인"></img> <br> 
 
    가상머신의 네트워크 어댑터는 SDN에 연결되어 있으므로 할당된 IP 주소는 *KVM 하이퍼바이저*에서 사용하는 내부 IP 주소이며 외부에서 액세스할 수 있는 IP가 아닙니다. 가상머신이 다른 노드로 라이브 마이그레이션되고 SDN에 연결된 외부 IP가 변경되더라도 가상머신의 IP는 변경되지 않습니다.
 <br>
 
 5. `lsblk`를 실행하여 디스크 목록과 해당 용량, 여유 공간을 표시합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.5_Fedora_Disk.png" title="100px" alt="페도라 가상머신 블록 디바이스 확인"></img> <br> 
+   <img src="new_images/18_fedora_lsblk_command.png" title="100px" alt="페도라 가상머신 블록 디바이스 확인"></img> <br> 
 
    * `/dev/vda`는 가상머신 생성 중에 생성된 디스크이며 생성 시 지정된 크기입니다.
    * `/dev/vdb`는 `cloud-init`으로 필수 데이터(예: `fedora` 사용자 비밀번호 등) 구성에 사용됩니다. 이 디스크는 가상머신이 생성된 후 제거될 수 있습니다.
@@ -162,22 +162,22 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 6. `nproc` 및 `free -m` 명령을 사용하여 가상머신과 연결된 CPU 수 및 메모리 양(생성 중에 지정된 flavor와 일치)을 검사합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.6_Fedora_CPU_Memory.png" title="100px" alt="페도라 가상머신 CPU/MEM 확인"></img> <br> 
+   <img src="lab-images/new_images/19_fedora_resources.png" title="100px" alt="페도라 가상머신 CPU/MEM 확인"></img> <br> 
 <br>
 
 7. 게스트 사용자 정의를 검토하려면 `cloud-init` 디스크를 마운트합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.7_Fedora01_Cloud_Init.png" title="100px" alt="페도라 가상머신 용 cloud-init"></img> <br> 
+   <img src="new_images/20_fedora_cloud_init.png" title="100px" alt="페도라 가상머신 용 cloud-init"></img> <br> 
 <br>
 
 8. 하이퍼바이저에 인스턴스는 정보를 표시하고 인스턴스의 디스크 정지와 같은 작업을 조정하기 위해 게스트 에이전트를 실행 중입니다.
 
-   <img src="lab-images/virt_basic--2.2.1.8_Fedora_Agent.png" title="100px" alt="페도라 가상머신 내 게스트 에이전트 실행"></img> <br> 
+   <img src="new_images/21_fedora_agent.png" title="100px" alt="페도라 가상머신 내 게스트 에이전트 실행"></img> <br> 
 <br>
 
 9. **Overview** 탭을 클릭하여 게스트 가상머신에서 얻은 정보를 표시합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.9_Fedora_Agent_Details.png" title="100px" alt="페도라 가상머신 정보 표시"></img> <br> 
+   <img src="new_images/22_fedora_overview.png" title="100px" alt="페도라 가상머신 정보 표시"></img> <br> 
 
    * 호스트 이름
    * 운영체제 버전 및 타임존 정보

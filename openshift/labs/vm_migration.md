@@ -115,6 +115,8 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
    <img src="new_images/119_create_mig_plan_providers.png" title="100px" alt="VMware 마이그레이션 공급자 선택"></img> <br>
 
+  <img src="new_images/120_vm_select.png" title="100px" alt="VMware 마이그레이션 공급자 선택"></img> <br>
+
    * **database**
    * **winweb01**
    * **winweb02**
@@ -122,6 +124,8 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 3. **Next**를 선택합니다.
 
 4. 다음 화면에서는 마이그레이션 계획에 대한 세부 정보를 제공하는 작업을 수행하게 됩니다. 몇 가지 세부 정보가 이미 채워져있지만 VM이 올바른 네임스페이스에 배치되고 네트워크 및 스토리지 옵션이 올바르게 매핑되도록 몇 가지 사소한 수정을 수행해야 합니다.
+
+   <img src="new_images/121_vm_mig_plan.png" title="100px" alt="VMware 마이그레이션 계획 생성"></img> <br>
 
    다음 값으로 마이그레이션 계획을 작성하고, **Create migration plan**을 선택합니다.
 
@@ -136,8 +140,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 5. 마이그레이션 계획이 준비되고 있음을 확인할 수 있는 새로운 화면으로 이동됩니다.
 
-
-   <img src="lab-images/vm_migration--3.4.3_VM_Filter_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 필터"></img> <br>
+   <img src="lab-images/new_images/122_plan_not_ready.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 준비"></img> <br>
 <br>
 
 4. 다음 단계에서는 3개의 가상머신(database, winweb01/02)을 선택하고 **Next**를 누르세요:

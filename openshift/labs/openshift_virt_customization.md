@@ -147,7 +147,7 @@
 
 17. **Create VirtualMachine**을 눌러 생성 후 **Start this VirtualMachine after creation** 옵션이 선택되어 있는지 확인합니다.
 
-    <img src="new_images/60_create_vm.png" title="100px" alt="가상머신 사용자 정의 생성 및 리뷰"></img> <br>
+    <img src="new_images/60_create_vm_new.png" title="100px" alt="가상머신 사용자 정의 생성 및 리뷰"></img> <br>
 
 > [!NOTE]
 > *Start this VirtualMachine after creation* 상자를 선택하는 것을 잊은 경우 가상머신이 생성되고 `Stopped` 상태라면 패널 오른쪽 상단에 있는 작업 드롭다운을 클릭하고 **Start** 을 선택합니다.

@@ -47,7 +47,8 @@
    <img src="new_images/45_fedora_select.png" title="100px" alt="Fedora 가상머신 템플릿 선택"></img> <br>
 <br>
 
-5. 열린 대화 상자에서 VM **Name**, **Book Disk** 정보등을 수정하여 사용자 정의 할 수 있습니다.
+5. 열린 대화 상자에서 VM의 **Name**, **Disk Source** 정보 등을 수정하여 사용자 정의 할 수 있습니다. <br>
+
    이 템플릿에는 이미 사용 가능한 디스크가 있지만 외부 웹 서버에서 다른 디스크를 가져오고 싶습니다. 이는 디스크 라이브러리에서 가상머신을 배포하기 위한 한 가지 옵션이지만 스토리지 공급자에 의존하여 디스크용 PVC 클론을 오프로드하는 것보다 느릴 수 있습니다. 여기에 사용된 QCOW2 디스크 이미지를 PVC로 가져와 가상머신 클론용 소스 디스크로 사용할 수도 있습니다. 이를 수행하는 방법에 대한 자세한 내용은 [설명서](https://docs.openshift.com/container-platform/4.13/virt/virtual_machines/importing_vms/virt-importing-virtual-machine-images-datavolumes.html)를 참조하십시오.
 
    <img src="new_images/46_fedora_customize.png" title="100px" alt="템플렛에서 가상머신 사용자 정의 클릭"></img> <br>
@@ -62,7 +63,7 @@
 
 6. 템플릿의 기본 구성으로 **Overview** 탭을 검토합니다.
 
-   <img src="lab-images/virt_cust--2.7_Wizard_General.png" title="100px" alt="가상머신 사용자 정의 개요 확인"></img> <br>
+   <img src="new_images/50_change_resource.png" title="100px" alt="가상머신 사용자 정의 개요 확인"></img> <br>
 <br>
 
 7. 가상 머신의 리소스 할당을 조정하기 위해 **CPU | Memory** 링크를 클릭하고, CPU 수를 2로, 메모리를 4GiB로 변경합니다.

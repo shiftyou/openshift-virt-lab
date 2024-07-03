@@ -71,7 +71,7 @@
 
 8. **Actions** 메뉴에서 **Unpause** 클릭하여 *가상머신*의 일시 중지를 해제합니다.
 
-   <img src="new_images/68_fedora02_vm_unpause.png" title="100px" alt="가상머신 작업 - 가상머신 일시 중지 해제"></img> <br>
+   <img src="new_images/69_fedora02_vm_unpause.png" title="100px" alt="가상머신 작업 - 가상머신 일시 중지 해제"></img> <br>
 <br>
 
 ### 2.2 가상머신 라이브 마이그레이션

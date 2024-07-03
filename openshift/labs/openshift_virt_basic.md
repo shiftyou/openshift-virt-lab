@@ -255,41 +255,33 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 <br>
 
 7. 이 대화 상자에서 **Name** 필드에 `windows`로 이름을 입력합니다.
-   
-   <img src="new_images/31_vm_change_name.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 이름 섹션"></img> <br>
-<br>
 
 8. **Storage** 섹션에서 다음을 지정합니다.
-   
-   <img src="new_images/32_boot_disk.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 스토리지 섹션"></img> <br>
-
    1. `Boot from CD` 체크박스를 활성화
    2. **CD Source**를 URL로 선택
    3. **Image URL**에 *http://192.168.123.100:81/Windows2019.iso* 를 입력
    4. **Disk size**를 **5GiB**로 설정하여 CD 크기를 줄임
-<br>
 
 9. **Disk source**를 그대로 두고 하단의 **Disk size**의 값도 기본값인 **60GiB**로 유지합니다.
 
-   <img src="lab-images/virt_basic--2.3.9_Cust_template_paras_storage_source.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 스토리지 섹션의 소스 디스크"></img> <br>
-<br>
-
 10. `Mount Windows drivers disk`가 활성화되어 있는지 확인합니다. 이는 VirtIO용 드라이버를 제공하는 윈도우 시스템을 설치하는 데 필요합니다.
 
-    <img src="lab-images/virt_basic--2.3.10_Cust_template_paras_storage_mount_driver.png" height="50%" width="50%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 스토리지 섹션의 드라이버 마운트"></img> <br>
+11. 매개변수를 입력이 완료되면 **Customize VirtualMachine을**를 누르고, 변경한 이름과 Boot Disk 설정을 확인합니다.
+
+    <img src="new_images/32_window_vm_setting.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
-11. 매개변수를 입력이 완료되면 **Next**를 누릅니다.
-
-    <img src="lab-images/virt_basic--2.3.11_Windows_2k9_Parameters_Filled.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
+12. **Disk** 메뉴에서 Book Disk 순서 변경을 위해 **installation-cdrom**의 맨 끝을 눌러 설정 편집을 진행합니다.
+    <img src="new_images/32_boot_disk.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
-12. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
+
+14. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
 
     <img src="lab-images/virt_basic--2.3.12_Windows_2k9_Scripts.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 <br>
 
-13. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
+15. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
 
     <img src="lab-images/virt_basic--2.3.13_sysprep.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 

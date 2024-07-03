@@ -31,7 +31,7 @@
 
 2. 왼쪽 메뉴에서 **Virtualization** → **VirtualMachines**으로 돌아  갑니다.
 
-   <img src="lab-images/virt_cust--2.2_VMs.png" title="100px" alt="가상머신 리스트"></img> <br> 
+   <img src="new_images/43_vm_lists.png" title="100px" alt="가상머신 리스트"></img> <br> 
 
 > [!NOTE]
 > 이전 페이지에서 생성된 가상머신이 표시되지 않으면 패널 왼쪽 상단에 있는 `vmexamples` 프로젝트가 표시되는지 다시 확인하세요.
@@ -39,12 +39,12 @@
 
 3. 오른쪽 상단 드롭다운에서 **Create** → **From template**을 선택합니다.
 
-   <img src="lab-images/virt_cust--2.3_Create.png" title="100px" alt="템플렛에서 가상머신 생성"></img> <br> 
+   <img src="new_images/44_create_vm_templates.png" title="100px" alt="템플렛에서 가상머신 생성"></img> <br> 
 <br>
 
 4. 검색 창에 **fedora**를 입력하여 나타난 사전 정의된 템플릿 **Fedora VM** 타일을 선택합니다.
 
-   <img src="lab-images/virt_cust--2.4_Catalog.png" title="100px" alt="Fedora 가상머신 템플릿 선택"></img> <br>
+   <img src="new_images/45_fedora_select.png" title="100px" alt="Fedora 가상머신 템플릿 선택"></img> <br>
 <br>
 
 5. 열린 대화 상자에서 **Customzie VirtualMachine**을 클릭합니다.

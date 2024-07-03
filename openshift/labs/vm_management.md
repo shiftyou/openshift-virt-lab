@@ -35,12 +35,12 @@
 
 2. 목록에서 *가상머신* `fedora02`를 선택합니다.
 
-   <img src="lab-images/vm_mgmt--2.1.2_select_fedora02_vm.png" title="100px" alt="fedora02 가상머신 선택"></img> <br>
+   <img src="new_images/63_fedora02_vm.png" title="100px" alt="fedora02 가상머신 선택"></img> <br>
 <br>
 
 3. 오른쪽 상단 드롭다운인 **Actions**을 눌러 사용 가능한 옵션을 나열합니다.
 
-   <img src="lab-images/vm_mgmt--2.1.3_VM_Actions_List.png" title="100px" alt="가상머신 작업 리스트"></img> <br> 
+   <img src="new_images/64_fedora02_actions.png" title="100px" alt="가상머신 작업 리스트"></img> <br> 
 
    1. **Stop**: *가상머신*의 정상적인 종료를 시작합니다.
 
@@ -51,12 +51,12 @@
 
 4. **Stop**을 누르고 *가상머신*이 `Stopped` 상태가 될 때까지 기다립니다.
 
-   <img src="lab-images/vm_mgmt--2.1.4_VM_Stopped.png" title="100px" alt="가상머신 작업 - 중지"></img> <br>
+   <img src="new_images/65_fedora02_vm_stop.png" title="100px" alt="가상머신 작업 - 중지"></img> <br>
 <br>
 
 5. **Actions**을 클릭하면 **Start** 옵션이 나타나고 **Restart** 및 **Pause** 옵션이 회색으로 표시됩니다.
 
-   <img src="lab-images/vm_mgmt--2.1.5_VM_Actions_List_Stopped.png" title="100px" alt="중지된 가상머신의 작업 리스트"></img> <br>
+   <img src="new_images/66_fedora02_vm_status.png" title="100px" alt="중지된 가상머신의 작업 리스트"></img> <br>
 <br>
 
 6. **Start**을 누르고 `Running` 상태가 될 때까지 기다린 후 **Actions** 메뉴를 사용하여 **Pause** 옵션을 누릅니다.

@@ -89,29 +89,30 @@ spec:
 1. **Virtualization** → **VirtualMachines**으로 이동하여 `fedora02` 가상머신을 선택합니다. **Configuration** 탭을 클릭한 다음 **Network** 메뉴를 클릭하고, **Add network interface**를 클릭합니다.
    <img src="new_images/77_fedora02_network_add.png" title="100px" alt="하부 탭인 네트워크 인터페이스 확인"></img> <br>
 <br>
-  VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본으로 사용하고 있음을 알 수 있습니다. <br>
-  대부분의 경우 단일 OVS Bridge는 각각의 고유 지정된 **VLAN** 태그 번호가 있는 여러 네트워크 연결 정의를 지원할 수 있습니다. 이 실습에서는 태그가 지정되지 않은 네트워크를 사용하므로 VLAN 번호가 필요하지 않으므로 연결 정의는 **vlan0**으로 레이블이 지정됩니다. 이 기존 연결을 수정하거나 VM에 새 인터페이스를 추가할 수 있으며, 작업 이후에는 VM을 다시 시작해야 합니다.<br>
 
-2. 위에서 생성한 `vmexamples/vlan01 네트워크 연결 정의를 추가하고, **Save**를 클릭합니다.
+VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본으로 사용하고 있음을 알 수 있습니다. <br>
+대부분의 경우 단일 OVS Bridge는 각각의 고유 지정된 **VLAN** 태그 번호가 있는 여러 네트워크 연결 정의를 지원할 수 있습니다. 이 실습에서는 태그가 지정되지 않은 네트워크를 사용하므로 VLAN 번호가 필요하지 않으므로 연결 정의는 **vlan0**으로 레이블이 지정됩니다. 이 기존 연결을 수정하거나 VM에 새 인터페이스를 추가할 수 있으며, 작업 이후에는 VM을 다시 시작해야 합니다. <br>
+
+3. 위에서 생성한 `vmexamples/vlan01 네트워크 연결 정의를 추가하고, **Save**를 클릭합니다.
 
    <img src="new_images/78_fedora02_network_add_vlan.png" title="100px" alt="네트워크 인터페이스 세부 설정"></img> <br>
 <br>
 
 
-3. **Actions** 메뉴의 *Restart*를 클릭하여 가상머신을 다시 시작합니다. 
+4. **Actions** 메뉴의 *Restart*를 클릭하여 가상머신을 다시 시작합니다. 
 
    <img src="lab-images/network_mgmt--3.3_restart_vm.png" title="100px" alt="가상머신 재시작"></img> <br>
 <br>
 
 
-4. 재부팅 후 **Console** 탭으로 이동합니다.
+5. 재부팅 후 **Console** 탭으로 이동합니다.
 
    `eth1` 인터페이스는 플랫 네트워크(`192.168.3.x/24`)에서 IP 주소를 얻습니다. 해당 네트워크에는 IP를 제공하는 DHCP 서버가 있습니다.
 
    <img src="lab-images/network_mgmt--3.4_VM_Network_Console.png" title="100px" alt="가상머신 콘솔 확인"></img> <br>
 <br>
 
-5. (선택 사항) 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다.
+6. (선택 사항) 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다.
    1. 오른쪽 상단 아이콘을 눌러 터미널을 엽니다.
 
       <img src="lab-images/network_mgmt--3.5.1_OCP_Terminal_Icon.png" title="100px" alt="가상머신 콘솔 연결"></img> <br>

@@ -64,26 +64,26 @@
    **VSPHERE CLIENT 시작**을 누릅니다.<br>
    <img src="lab-images/vm_migration--3.1.1.1_vSphere_client.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
 
-   사용자 `%vcenter_user%@vc.opentlc.com` 및 비밀번호 `%vcenter_password%`로 로그인합니다.
-   <img src="lab-images/vm_migration--3.1.1.2_input_id_pw.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
+   사용자 `vcenter_user` 및 비밀번호 `%vcenter_password%`로 로그인합니다.
+   <img src="new_images/107_vcenter_accounts.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
 <br>
 
 3. **VM** 탭을 선택하여 가상머신 리스트를 확인합니다.
 
-   <img src="lab-images/vm_migration--3.1.2_vSphere_VM_List.png" title="100px" alt="vSphere의 가상머신 리스트"></img> <br> 
+   <img src="new_images/108_vm_lists.png" title="100px" alt="vSphere의 가상머신 리스트"></img> <br> 
 
 > [!NOTE]
 > 접미사가 `_running`인 가상머신이 활성화된 가상머신입니다. 마이그레이션을 중지해야 하는 경우 마이그레이션을 위해 가상머신의 복제본이 생성되었습니다. 해당 가상머신은 해당 접미사가 없는 가상머신입니다.
 <br>
 
-3. 이 [링크](https://portal.vc.opentlc.com/ui/app/dvportgroup;nav=n/urn:vmomi:DistributedVirtualPortgroup:dvportgroup-1916:ee1bef3e-6179-4c1f-9d2a-004c7b0df4e5/ports)로 이동하여 세그먼트를 검토하세요.
+3. vCneter 화면에서 세그먼트를 검토하세요.
 
-   <img src="lab-images/vm_migration--3.1.3_vSphere_Network.png" title="100px" alt="vSphere의 네트워크"></img> <br> 
+   <img src="new_images/109_vm_segment.png" title="100px" alt="vSphere의 네트워크"></img> <br> 
 <br>
 
-4. 이 [링크](https://portal.vc.opentlc.com/ui/app/datastore;nav=s/urn:vmomi:Datastore:datastore-48:ee1bef3e-6179-4c1f-9d2a-004c7b0df4e5/vms/vms)로 이동하여 스토리지를 검토하세요.
+4. vCenter 화면에서 스토리지를 검토하세요.
 
-   <img src="lab-images/vm_migration--3.1.4_vSphere_Datastore.png" title="100px" alt="vSphere의 데이터 소스"></img> <br> 
+   <img src="new_images/110_vm_storage.png" title="100px" alt="vSphere의 데이터 소스"></img> <br> 
 <br>
 
 ### 3.2 마이그레이션 툴킷에 대한 VMware 공급자 생성
@@ -91,119 +91,51 @@
 MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit(VDDK) SDK를 사용하여 VMware vSphere에서 가상 디스크를 전송합니다. 이 VDDK는 이 환경에 이미 설정되어 있습니다.
 <br>
 
-1. 오픈시프트 콘솔의 왼쪽 메뉴에서 **Migration** → **Providers for virtualization**으로 이동합니다.
+1. 프로젝트 `openshift-mtv`를 선택하세요.
 
-   <img src="lab-images/vm_migration--3.2.1_MTV_menu.png" title="100px" alt="MTV 메뉴"></img> <br> 
+   <img src="new_images/112_mtv_project.png" title="100px" alt="프로젝트 선택"></img> <br> 
 <br>
 
-2. 프로젝트 `openshift-mtv`를 선택하세요.
-
-   <img src="lab-images/vm_migration--3.2.2_select_project.png" title="100px" alt="프로젝트 선택"></img> <br> 
-<br>
-
-3. 기본적으로 **OpenShift Virtualization**을 대상 플랫폼으로 나타내는 `host`라는 공급자가 있습니다.
+2. 기본적으로 **OpenShift Virtualization**을 대상 플랫폼으로 나타내는 `host`라는 공급자가 있습니다.
    
-   <img src="lab-images/vm_migration--3.2.3.1_MTV_Provider_list.png" title="100px" alt="MTV 프로바이더 리스트 확인"></img> <br> 
-   소스 vCenter 시스템을 Migration Toolkit for Virtualization에 새 공급자로 등록해야 합니다.
+   <img src="new_images/114_vm_host_providers.png" title="100px" alt="MTV 프로바이더 리스트 확인"></img> <br> 
+   이 실습환경은 이미 `vmware`라는 **VMware Provider**로 구성되어 있으며 마이그레이션 소스로 표시되어 있습니다.
 
-> [!NOTE]
-> `vmware` 프로바이더가 이미 있으면 다음 단계는 건너 뜁니다.<br>
-> <br>
-> <img src="lab-images/vm_migration--3.2.3.2_MTV_Provider_list.png" title="100px" alt="MTV 프로바이더 리스트 확인"></img>
-<br>
 
-4. 오른쪽 상단의 **Create Provider** 버튼을 누르면 대화 상자가 나타납니다.
+### 3.3 마이그레이션 계획 생성
 
-   <img src="lab-images/vm_migration--3.2.4_MTV_Create_Provider.png" title="100px" alt="MTV 프로바이더 생성"></img> <br> 
-<br>
-
-5. (옵션) **Provider type** 드롭다운에서 **VMware**를 선택하고 다음 데이터를 입력합니다.
-
-   <img src="lab-images/vm_migration--3.2.5_MTV_Fill_Dialog.png" title="100px" alt="VMware 용 프로바이더 설정"></img> <br> 
-
-   1. **Provider Name**: `vmware`
-   2. **vCenter server hostname or IP address**: `portal.vc.opentlc.com`
-   3. **vCenter user name**: `%vcenter_user%@vc.opentlc.com`
-   4. **vCenter password**: `%vcenter_password%`
-   5. **VDDK init image**: `image-registry.openshift-image-registry.svc:5000/openshift/vddk:latest`
-   6. **SHA-1 fingerprint**: `C7:BF:C2:DD:CD:73:1C:22:DC:D1:5A:DD:EA:64:21:C1:97:FB:F0:9C`
-<br>
-
-6. (옵션) **Create**를 누르고 **Status** 열이 `Ready`로 변경될 때까지 기다립니다.
-
-   <img src="lab-images/vm_migration--3.2.6_MTV_Provider_Added.png" title="100px" alt="생성된 프로바이더 확인"></img> <br> 
-   이제 MTV는 귀하의 VMware vSphere 환경을 알고 연결할 수 있습니다.
-<br>
-
-### 3.3 스토리지 및 네트워크 매핑 생성
-
-VMware vSphere와 레드햇 오픈시프트에서는 스토리지와 네트워킹이 다르게 관리됩니다. 따라서 VMware vSphere의 소스 데이터 저장소 및 네트워크에서 오픈시프트의 해당 항목에 대한 (간단한) 매핑을 생성해야 합니다. 그런 다음 이 매핑은 VMware vSphere 네트워크 및 스토리지 정의를 오픈시프트 네트워크 및 스토리지 정의로 변환하는 데 사용됩니다.
-
-이는 한 번만 구성하면 이후 가상머신 마이그레이션 계획에서 재사용됩니다.
-<br>
-
-1. 왼쪽 메뉴에서 **Migration** → **NetworkMaps for virtualization**로 이동한 후 **Create NetworkMap**을 누릅니다.
-
-   <img src="lab-images/vm_migration--3.3.1_MTV_NetworkMaps.png" title="100px" alt="MTV 네트워크 맵"></img> <br>
-<br>
-
-2. 나타나는 대화상자에 다음 정보를 입력한 후 **Create**를 누릅니다.
-
-   <img src="lab-images/vm_migration--3.3.2_Add_VMWARE_Mapping_Network.png" title="100px" alt="VMware 네트워크 매핑 추가"></img> <br>
-   
-   * **Name**: `mapping-segment`
-   * **Source provider**: `vmware`
-   * **Target provider**: `host`
-   * **Source networks**: `segment-migrating-to-ocpvirt`
-   * **Target namespaces / networks**: `Pod network (default)`
-<br>
-
-3. 생성된 매핑의 **Status** 값이 `Ready`인지 확인합니다.
-
-   <img src="lab-images/vm_migration--3.3.3_List_VMWARE_Mapping_Network.png" title="100px" alt="VMware 네트워크 매핑 리스트"></img> <br>
-<br>
-
-4. 왼쪽 메뉴에서 **Migration** → **StorageMaps for virtualization**로 이동한 후 **Create StorageMap**을 누릅니다.
-
-   <img src="lab-images/vm_migration--3.3.4_MTV_StorageMaps.png" title="100px" alt="MTV 스토리지 맵"></img> <br>
-<br>
-
-5. 다음 정보를 입력 후 **Create** 를 누릅니다.
-
-   <img src="lab-images/vm_migration--3.3.5_Add_VMWARE_Mapping_Storage.png" title="100px" alt="VMware 스토리지 매핑 추가"></img> <br>
-
-   * **Name**: `mapping-datasource`
-   * **Source provider**: `vmware`
-   * **Target provider**: `host`
-   * **Source storage**: `WorkloadDatastore`
-   * **Target storage class**: `ocs-storagecluster-ceph-rbd (default)`
-<br>
-
-6. 생성된 매핑의 **Status** 값이 `Ready`인지 확인합니다.
-
-   <img src="lab-images/vm_migration--3.3.6_List_VMWARE_Mapping_Storage.png" title="100px" alt="VMware 스토리지 매핑 리스트"></img> <br>
-<br>
-
-### 3.4 마이그레이션 계획 생성
-
-이제 가상화 공급자와 두 가지 매핑(네트워크 및 스토리지)이 있으므로 마이그레이션 계획을 생성할 수 있습니다. 이 계획에서는 VMware vSphere에서 레드햇 오픈시프트 가상화로 마이그레이션할 가상머신과 마이그레이션 실행 방법(콜드/웜, 네트워크 매핑, 스토리지 매핑, 사전/사후 후크 등)을 선택합니다.
+이 계획에서는 VMware vSphere에서 레드햇 오픈시프트 가상화로 마이그레이션할 가상머신과 마이그레이션 실행 방법(콜드/웜, 네트워크 매핑, 스토리지 매핑, 사전/사후 후크 등)을 선택합니다.
 
 1. 왼쪽 메뉴에서 **마이그레이션(Migration)** → **가상화 계획(Plans for virtualization)** 으로 이동한 후 **계획 생성(Create plan)** 을 누릅니다.
 
-   <img src="lab-images/vm_migration--3.4.1_Create_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 생성"></img> <br>
+   <img src="new_images/118_create_mig_plan.png" title="100px" alt="VMware 마이그레이션 계획 생성"></img> <br>
 <br>
 
-2. 마법사의 **General** 설정 단계에서 다음 정보를 입력합니다. 완료되면 **Next**를 누르세요.
+2. 마법사의 **1) Select source provider** 설정 단계에서 **VMware**를 선택하고, 다음 페이지에서 마이그레이션하려는 3개의 VM을 선택합니다.
 
-   <img src="lab-images/vm_migration--3.4.2_General_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 일반 계획"></img> <br>
+   <img src="new_images/119_create_mig_plan_providers.png" title="100px" alt="VMware 마이그레이션 공급자 선택"></img> <br>
+
+   * **database**
+   * **winweb01**
+   * **winweb02**
+  
+3. **Next**를 선택합니다.
+
+4. 다음 화면에서는 마이그레이션 계획에 대한 세부 정보를 제공하는 작업을 수행하게 됩니다. 몇 가지 세부 정보가 이미 채워져있지만 VM이 올바른 네임스페이스에 배치되고 네트워크 및 스토리지 옵션이 올바르게 매핑되도록 몇 가지 사소한 수정을 수행해야 합니다.
+
+   다음 값으로 마이그레이션 계획을 작성하고, **Create migration plan**을 선택합니다.
 
    * **Plan name**: `move-webapp-vmware`
-   * **Source provider**: `vmware`
-   * **Target provider**: `host`
    * **Target namespace**: `vmexamples`
+   * **Network map**: `Pod Networking`
+   * **Storage map**: `ocs-storagecluster-ceph-rbd-virtualization`
+   <br>
+   Network 및 Storage Map 모두 검색된 가상 머신이 현재 Source Provider에서 사용하는 Network 및 Datastore를 자동으로 감지합니다.
+   
 <br>
 
-3. 다음 단계에서 **All datacenters** 를 선택하고 **Next**를 누릅니다.
+5. 마이그레이션 계획이 준비되고 있음을 확인할 수 있는 새로운 화면으로 이동됩니다.
+
 
    <img src="lab-images/vm_migration--3.4.3_VM_Filter_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 필터"></img> <br>
 <br>

@@ -42,7 +42,7 @@
 
 <br>
 
-1. **스토리지** → **영구 볼륨 클레임**으로 이동합니다.
+1. **관리(Administration)** → **사용자 지정 리소스 정의(CustomResourceDefinitions)**으로 이동합니다.
 
    <img src="lab-images/storage_mgmt--2.1_Left_Menu.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
 <br>

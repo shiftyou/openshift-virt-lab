@@ -157,7 +157,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 10. 마이그레이션 된 **3개의 VM 중 0개**라는 상태와 함께 진행률이 화면 중앙에 나타납니다.
 
-   <img src="new_images/125_vm_mig_running.png" title="100px" alt="VMware 마이그레이션 계획 스토리지"></img> <br>
+   <img src="new_images/125_vm_mig_details.png" title="100px" alt="VMware 마이그레이션 계획 스토리지"></img> <br>
 <br>
 
 11. 마이그레이션이 진행되는 것을 확인합니다.

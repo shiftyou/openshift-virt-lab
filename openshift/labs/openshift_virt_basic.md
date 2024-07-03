@@ -64,16 +64,16 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 2. 가상머신이 없기 때문에 현재 비어 있는 것으로 **VirtualMachines** 대시보드가 표시되는지 확인합니다.
    
-   <img src="lab-images/virt_basic--2.1.2_OCP_Virt_Dashboard.png" title="100px" alt="가상머신 대시보드"></img> <br>
+   <img src="new_images/04_ocp_virt_dashboard.png" title="100px" alt="가상머신 대시보드"></img> <br>
 <br>
 
 3. 가상머신을 만들기 전에 새 프로젝트를 만들어야 합니다. 가상머신은 기본적으로 네임스페이스에 대한 권한이 없는 사용자가 액세스, 관리 또는 제어할 수 없는 특정 프로젝트 또는 네임스페이스에 배포됩니다. 관리자는 모든 프로젝트에 액세스할 수 있으므로 모든 가상머신을 볼 수 있지만 일반 사용자에게는 필요에 따라 프로젝트에 대한 액세스 권한을 부여해야 합니다.
 
    1. **프로젝트: 모든 프로젝트**를 클릭한 다음 **프로젝트 만들기**를 클릭합니다.
-      <img src="lab-images/virt_basic--2.1.3.1_select_all_project.png" title="100px" alt="모든 프로젝트 선택"></img> <br> 
+      <img src="new_images/05_project.png" title="100px" alt="모든 프로젝트 선택"></img> <br> 
 
    2. **이름** 필드에 `vmexamples`를 입력하여 프로젝트 이름을 입력한 다음 **만들기** 를 클릭합니다.
-      <img src="lab-images/virt_basic--2.1.3.2_Create_Project.png" title="100px" alt="프로젝트 생성하기"></img> <br> 
+      <img src="new_images/06_project_name.png" title="100px" alt="프로젝트 생성하기"></img> <br> 
 <br>
 
 4. 프로젝트가 `vxexamples`인 것을 확인하고 **Create VirtualMachine**을 클릭합니다.

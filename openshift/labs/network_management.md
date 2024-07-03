@@ -91,7 +91,9 @@ spec:
 <br>
 
 VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본으로 사용하고 있음을 알 수 있습니다. <br>
-대부분의 경우 단일 OVS Bridge는 각각의 고유 지정된 **VLAN** 태그 번호가 있는 여러 네트워크 연결 정의를 지원할 수 있습니다. 이 실습에서는 태그가 지정되지 않은 네트워크를 사용하므로 VLAN 번호가 필요하지 않으므로 연결 정의는 **vlan0**으로 레이블이 지정됩니다. 이 기존 연결을 수정하거나 VM에 새 인터페이스를 추가할 수 있으며, 작업 이후에는 VM을 다시 시작해야 합니다. <br>
+대부분의 경우 단일 OVS Bridge는 각각의 고유 지정된 **VLAN** 태그 번호가 있는 여러 네트워크 연결 정의를 지원할 수 있습니다. <br>
+이 실습에서는 태그가 지정되지 않은 네트워크를 사용하므로 VLAN 번호가 필요하지 않으므로 연결 정의는 **vlan0**으로 레이블이 지정됩니다. <br>
+이 기존 연결을 수정하거나 VM에 새 인터페이스를 추가할 수 있으며, 작업 이후에는 VM을 다시 시작해야 합니다. <br>
 
 3. 위에서 생성한 `vmexamples/vlan01 네트워크 연결 정의를 추가하고, **Save**를 클릭합니다.
 
@@ -101,43 +103,45 @@ VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본�
 
 4. **Actions** 메뉴의 *Restart*를 클릭하여 가상머신을 다시 시작합니다. 
 
-   <img src="lab-images/network_mgmt--3.3_restart_vm.png" title="100px" alt="가상머신 재시작"></img> <br>
+   <img src="new_images/79_vm_restart.png" title="100px" alt="가상머신 재시작"></img> <br>
 <br>
 
 
-5. 재부팅 후 **Console** 탭으로 이동합니다.
+5. 재부팅 후 **Overview** 탭으로 이동합니다.
 
    `eth1` 인터페이스는 플랫 네트워크(`192.168.3.x/24`)에서 IP 주소를 얻습니다. 해당 네트워크에는 IP를 제공하는 DHCP 서버가 있습니다.
 
-   <img src="lab-images/network_mgmt--3.4_VM_Network_Console.png" title="100px" alt="가상머신 콘솔 확인"></img> <br>
+   <img src="new_images/80_fedora02_vm_network.png" title="100px" alt="가상머신 네트워크 인터페이스 확인"></img> <br>
 <br>
 
-6. (선택 사항) 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다.
-   1. 오른쪽 상단 아이콘을 눌러 터미널을 엽니다.
+6. **Console** 탭에서도 추가된 인터페이스를 확인 할 수 있습니다.
 
-      <img src="lab-images/network_mgmt--3.5.1_OCP_Terminal_Icon.png" title="100px" alt="가상머신 콘솔 연결"></img> <br>
+   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 Console 확인"></img> <br>
+<br>
 
-   2. 화면 하단에 콘솔이 나타납니다.
-      <img src="lab-images/network_mgmt--3.5.2_OCP_Terminal.png" title="100px" alt="가상머신 콘솔 연결 확인"></img> <br>
+7. (선택 사항) 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다. <br>
+   사전에 Hypervisor 서버에 cockpit을 설치해 두었으므로 웹 콘솔을 이용하여 이를 이용하여 베스천 호스트에 연결할 수 있습니다.
+   
+   1. 웹 브라우저에서 제공 받은 `hypervisor.khsqt.dynamic.redhatworkshops.io` 주소를 이용하여 `https://hypervisor.khsqt.dynamic.redhatworkshops.io:9090`으로 접속합니다. <br>
+      제공받은 주소는 다를 수 있으므로 대체해서 접속해야 합니다.
 
-> [!NOTE]
-> 처음 시도하는 경우에 가상머신 터미널 초기화를 위해 **시작**을 누릅니다.<br>
-> <br>
-> <img src="lab-images/network_mgmt--3.5.2_note.png" title="100px" alt="가상머신 터미널 초기화"></img> <br>
+      <img src="new_images/83_cockpit.png" title="100px" alt="가상머신 Cockpit 연결"></img> <br>
 
-   3. IP를 교체하려면 다음 명령을 입력하십시오.
+   2. 터미널 메뉴를 선택하고, 자신의 IP를 확인한 후, `curl` 명령어를 실행합니다.
+
+   3. IP를 자신의 IP로 대체하여 아래 명령을 터미널 창에 입력합니다.
       
       ```bash
-      bash-4.4 ~ $ curl 192.168.3.153:22
+      bash-4.4 ~ $ curl 192.168.3.152:22
       ```
-
+   
       실행 결과
       ```bash
       SSH-2.0-OpenSSH_8.7
       ```
       
       실행 결과는 다음과 같습니다.
-      <img src="lab-images/network_mgmt--3.5.3_check_ssh.png" title="100px" alt="가상머신의 SSH 연결 확인"></img> <br>
+      <img src="new_images/83_curl.png" title="100px" alt="가상머신의 SSH 연결 확인"></img> <br>
       
 > [!NOTE]
 > 노드에 할당된 IP를 가지고 기존 IP를 교체합니다.

@@ -142,7 +142,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 7. 마이그레이션 계획이 준비되고 있음을 확인할 수 있는 새로운 화면으로 이동됩니다.
 
-   <img src="lab-images/new_images/122_plan_not_ready.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 준비 대기"></img> <br>
+   <img src="new_images/122_plan_not_ready.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 준비 대기"></img> <br>
 <br>
 
 8. 잠시 후 계획이 준비된 상태가 됩니다. **Plan details** 아래에 녹색 **재생** 버튼을 클릭하여 마이그레이션 프로세스를 시작합니다.

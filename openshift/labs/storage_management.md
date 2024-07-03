@@ -47,7 +47,7 @@
    <img src="lab-images/storage_mgmt--2.1_Left_Menu.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
 <br>
 
-2. 위의 **Name**에 **datasource를 검색합니다.
+2. 위의 **Name**에 **datasource**를 검색합니다.
 
    <img src="lab-images/storage_mgmt--2.2_Select_Project.png" height="75%" width="75%" title="100px" alt="프로젝트 선택"></img> <br> 
 <br>

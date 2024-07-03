@@ -61,7 +61,7 @@
 
 6. **Start**을 누르고 `Running` 상태가 될 때까지 기다린 후 **Actions** 메뉴를 사용하여 **Pause** 옵션을 누릅니다.
 
-   <img src="new_images/68_fedora02_vm_pause.png" title="100px" alt="가상머신 작업 - 일시 중지"></img> <br>
+   <img src="new_images/68_fedora02_vm_pause_2.png" title="100px" alt="가상머신 작업 - 일시 중지"></img> <br>
 <br>
 
 7. *가상머신* 상태가 `Paused`으로 변경됩니다.

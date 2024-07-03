@@ -25,7 +25,7 @@
 <br>
 
 1. **Virtualization** → **Overview**로 이동합니다.
-   <img src="lab-images/virt_cust--2.1_overview.png" title="100px" alt="가상머신 개요"></img> <br> 
+   <img src="new_images/01_overview.png" title="100px" alt="가상머신 개요"></img> <br> 
    이전 단계에서 가상머신을 생성했으므로 이제 이 대시보드에서 해당 가상머신이 사용하는 리소스를 볼 수 있습니다.
 <br>
 

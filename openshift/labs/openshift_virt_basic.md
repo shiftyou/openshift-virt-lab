@@ -107,7 +107,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 9. 가상머신이 생성된 후 **Events** 탭을 검사하여 프로세스의 일부 세부 정보를 확인합니다. 가상머신 생성에 문제가 있는 경우에 이 탭에 표시됩니다.
 
-   <img src="lab-images/virt_basic--2.1.9_Fedora_Events.png" title="100px" alt="페도라 가상머신 이벤트"></img> <br> 
+   <img src="new_images/13_events.png" title="100px" alt="페도라 가상머신 이벤트"></img> <br> 
 
    * *DataVolume*이 생성됩니다. *DataVolume*은 가상머신 디스크 생성을 관리하고 가상머신 생성 흐름 중에 오픈시프트 네이티브 스토리지에 대한 복제 또는 가져오기 프로세스를 추상화하는 데 사용됩니다.
    * 가상머신이 시작되었습니다.
@@ -117,7 +117,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
     SDN(소프트웨어 정의 네트워크)에 있는 가상머신의 IP 주소, 부팅 순서, 워크로드 프로필, 가상 머신을 호스팅하는 클러스터 노드 등에 대한 정보들이 함께 여기에 표시됩니다.
 
-    <img src="lab-images/virt_basic--2.1.10_Fedora_Details.png" title="100px" alt="페도라 가상머신 상세정보"></img> <br> 
+    <img src="new_images/14_os_info.png" title="100px" alt="페도라 가상머신 상세정보"></img> <br> 
 <br>
 
 ### 2.2 가상머신 액세스
@@ -126,12 +126,12 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 1. **Console** 탭을 클릭하여 가상머신 콘솔에 액세스합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.1_Fedora_Console.png" title="100px" alt="페도라 가상머신 콘솔"></img> <br> 
+   <img src="new_images/15_fedora_console.png" title="100px" alt="페도라 가상머신 콘솔"></img> <br> 
 <br>
 
 2. `fedora` 사용자의 생성된 비밀번호를 보려면 **Guest login credentials**을 클릭합니다. 이는 오픈시프트 가상화의 기본 템플릿에서 제공되는 cloud-init를 사용하여 비밀번호를 설정한, 사용자 정의 가상머신의 경우에만 표시됩니다.
 
-   <img src="lab-images/virt_basic--2.2.1.2_Fedora_Console_Show_Password.png" title="100px" alt="페도라 가상머신 콘솔 암호"></img> <br> 
+   <img src="new_images/16_fedora_console_02.png" title="100px" alt="페도라 가상머신 콘솔 암호"></img> <br> 
 <br>
 
 3. `fedora` 사용자와 표시된 비밀번호를 사용하여 가상머신에 로그인합니다.

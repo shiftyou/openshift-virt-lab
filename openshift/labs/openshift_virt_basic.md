@@ -187,14 +187,14 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 10. **Metrics** 탭으로 이동하여 시간 범위 지정 등을 통해 사용량에 대한 추가 정보를 얻을 수 있습니다.
 
-    <img src="lab-images/virt_basic--2.2.1.10_Fedora_Metrics.png" title="100px" alt="페도라 가상머신 메트릭 표시"></img> <br> 
+    <img src="new_images/23_fedora_metrics.png" title="100px" alt="페도라 가상머신 메트릭 표시"></img> <br> 
 <br>
 
 #### 2.2.2 가상머신과 연결된 리소스 검사
 
 **Configuration** 탭은 가상머신의 리소스에 대한 정보를 얻기 위한 진입점입니다. 여기에는 5개의 하위 탭이 포함되어 있습니다.
 
-<img src="lab-images/virt_basic--2.2.2_Scheduling_Tab.png" title="100px" alt="가상머신 스케줄링 탭"></img> <br> 
+<img src="new_images/24_fedora_configuration.png" title="100px" alt="가상머신 스케줄링 탭"></img> <br> 
 
 * **Scheduling**: 가상머신이 실행되어야 하는 위치와 제거를 위해 따라야 할 전략을 나타내는 고급 구성이 포함됩니다. 이는 (반)친화성[(anti)affinity] 규칙을 구성하고, 노드 선택기(selector)와 허용 오차를 구성하고, 가상머신을 예약할 수 있는 클러스터 노드에 영향을 미치는 기타 동작을 구성하는 데 사용됩니다.
 * **Environment**: *ConfigMap*, *Secret*, *서비스 계정(Service Accounts)* 을 추가 디스크로 연결할 수 있습니다. 이는 가상머신에서 실행 중인 애플리케이션에 구성 데이터를 전달할 때 유용합니다.
@@ -205,14 +205,14 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 1. **Network interfaces** 하위 탭을 클릭하여 가상머신에 연결된 네트워크 인터페이스를 검사합니다.
 
-   <img src="lab-images/virt_basic--2.2.2.1_Network_Tab.png" title="100px" alt="가상머신 네트워크 탭"></img> <br>
+   <img src="new_images/25_fedora_network_interface.png" title="100px" alt="가상머신 네트워크 탭"></img> <br>
 
    가상머신이 생성되면 기본적으로 `masquerade` 유형의 `PodNetworking` 네트워크 인터페이스가 생성됩니다. 이는 가상머신을 SDN에 연결하고 가상머신에서 오픈시프트 클러스터 외부로의 액세스를 제공합니다. 클러스터의 다른 가상머신 및 Pod는 이 인터페이스를 사용하여 가상머신에 액세스할 수 있습니다. 또한 SDN에 연결된 가상머신은 경로 또는 로드 밸런서를 사용하여 외부에서 액세스할 수 있지만 이 워크숍에서는 이에 대해 다루지 않습니다.
 <br>
 
 2. **Disks** 하위 탭을 클릭하여 가상머신과 연결된 디스크를 나열합니다.
 
-   <img src="lab-images/virt_basic--2.2.2.2_Disks_Tab.png" title="100px" alt="가상머신 디스크 탭"></img> <br> 
+   <img src="new_images/26_fedora_storage.png" title="100px" alt="가상머신 디스크 탭"></img> <br> 
 
    이 환경에서 디스크에 사용되는 저장소의 소스와 유형을 정의하는 기본 StorageClass를 `ocs-storagecluster-ceph-rbd`라고 합니다. 이 스토리지는 ODF(OpenShift Data Foundation)에서 제공하는 기본 유형입니다. 각 스토리지 제공자에는 가상머신 디스크를 지원하는 스토리지의 특성을 정의하는 다양한 스토리지 클래스가 있습니다.
 <br>
@@ -231,17 +231,17 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 2. 현재 프로젝트에서 실행 중인 가상머신이 나열됩니다.
 
-   <img src="lab-images/virt_basic--2.3.2_List_VMs.png" title="100px" alt="가상머신 리스트"></img> <br>
+   <img src="new_images/27_vmexamples_vm_status.png" title="100px" alt="가상머신 리스트"></img> <br>
 <br>
 
 3. 오른쪽 상단의 **Create** 버튼을 누르고 템플릿에서 선택합니다.
 
-   <img src="lab-images/virt_basic--2.3.3_From_Template.png" title="100px" alt="가상머신 생성 방법으로 템플릿"></img> <br>
+   <img src="new_images/28_create_vm_templates.png" title="100px" alt="가상머신 생성 방법으로 템플릿"></img> <br>
 <br>
 
 4. 검색 창에 *windows server* 입력 후 나타난 템플릿 중에 **Microsoft Windows Server 2019 VM** 타일을 선택합니다.
 
-   <img src="lab-images/virt_basic--2.3.4_Windows_2019_Tile.png" title="100px" alt="윈도우 2019 템플릿"></img> <br>
+   <img src="new_images/29_windows_vm_templates.png" title="100px" alt="윈도우 2019 템플릿"></img> <br>
 <br>
 
 5. 템플릿과 관련된 기본 구성을 보여주는 대화 상자가 나타납니다.

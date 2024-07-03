@@ -111,9 +111,11 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
    <img src="new_images/118_create_mig_plan.png" title="100px" alt="VMware 마이그레이션 계획 생성"></img> <br>
 <br>
 
-2. 마법사의 **1) Select source provider** 설정 단계에서 **VMware**를 선택하고, 다음 페이지에서 마이그레이션하려는 3개의 VM을 선택합니다.
+2. 마법사의 **1) Select source provider** 설정 단계에서 **VMware**를 선택합니다.
 
    <img src="new_images/119_create_mig_plan_providers.png" title="100px" alt="VMware 마이그레이션 공급자 선택"></img> <br>
+
+3. 다음 페이지에서 마이그레이션하려는 3개의 VM을 선택합니다.
 
   <img src="new_images/120_vm_select.png" title="100px" alt="VMware 마이그레이션 공급자 선택"></img> <br>
 
@@ -121,13 +123,13 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
    * **winweb01**
    * **winweb02**
   
-3. **Next**를 선택합니다.
+4. **Next**를 선택합니다.
 
-4. 다음 화면에서는 마이그레이션 계획에 대한 세부 정보를 제공하는 작업을 수행하게 됩니다. 몇 가지 세부 정보가 이미 채워져있지만 VM이 올바른 네임스페이스에 배치되고 네트워크 및 스토리지 옵션이 올바르게 매핑되도록 몇 가지 사소한 수정을 수행해야 합니다.
+5. 다음 화면에서는 마이그레이션 계획에 대한 세부 정보를 제공하는 작업을 수행하게 됩니다. 몇 가지 세부 정보가 이미 채워져있지만 VM이 올바른 네임스페이스에 배치되고 네트워크 및 스토리지 옵션이 올바르게 매핑되도록 몇 가지 사소한 수정을 수행해야 합니다.
 
    <img src="new_images/121_vm_mig_plan.png" title="100px" alt="VMware 마이그레이션 계획 생성"></img> <br>
 
-   다음 값으로 마이그레이션 계획을 작성하고, **Create migration plan**을 선택합니다.
+6. 다음 값으로 마이그레이션 계획을 작성하고, **Create migration plan**을 선택합니다.
 
    * **Plan name**: `move-webapp-vmware`
    * **Target namespace**: `vmexamples`
@@ -138,56 +140,30 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
    
 <br>
 
-5. 마이그레이션 계획이 준비되고 있음을 확인할 수 있는 새로운 화면으로 이동됩니다.
+7. 마이그레이션 계획이 준비되고 있음을 확인할 수 있는 새로운 화면으로 이동됩니다.
 
-   <img src="lab-images/new_images/122_plan_not_ready.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 준비"></img> <br>
+   <img src="lab-images/new_images/122_plan_not_ready.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 준비 대기"></img> <br>
 <br>
 
-4. 다음 단계에서는 3개의 가상머신(database, winweb01/02)을 선택하고 **Next**를 누르세요:
+8. 잠시 후 계획이 준비된 상태가 됩니다. **Plan details** 아래에 녹색 **재생** 버튼을 클릭하여 마이그레이션 프로세스를 시작합니다.
 
-   <img src="lab-images/vm_migration--3.4.4_VM_Select_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 가상머신 선택"></img> <br>
+   <img src="new_images/123_vm_mig_plan_ready.png" title="100px" alt="VMware 마이그레이션 계획 시작"></img> <br>
 <br>
 
-5. **Network mapping** 단계에서 `mapping-segment`를 선택하고 **Next**를 누릅니다.
+9. 마이그레이션을 시작하라는 확인 상자가 표시되면 **Start** 버튼을 클릭합니다.
 
-   <img src="lab-images/vm_migration--3.4.5_Network_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 네트워크"></img> <br>
+   <img src="new_images/124_vm_mig_start.png" title="100px" alt="마이그레이션 시작 버튼"></img> <br>
 <br>
 
-6. **Storage mapping** 단계에서 `mapping-datastore`를 선택하고 **Next**를 누릅니다.
+10. 마이그레이션 된 **3개의 VM 중 0개**라는 상태와 함께 진행률이 화면 중앙에 나타납니다.
 
-   <img src="lab-images/vm_migration--3.4.6_Storage_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 스토리지"></img> <br>
-<br>
-
-7. **Type** 및 **Hooks** 단계에서 **다음(Next)** 를 누릅니다.
-
-   **Migration type**은 `Cold migration` 기본 값을 그대로 둠
-   <img src="lab-images/vm_migration--3.4.7.1_migration_type.png" title="100px" alt="VMware 마이그레이션 타입"></img> <br>
-
-   **Hooks** 설정에 추가 없음
-   <img src="lab-images/vm_migration--3.4.7.2_migration_hook.png" title="100px" alt="VMware 마이그레이션 후크"></img> <br>
-<br>
-
-8. 지정된 구성을 검토하고 **Finish**를 누릅니다.
-
-   <img src="lab-images/vm_migration--3.4.8_Finish_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 종료"></img> <br>
-<br>
-
-9. 계획의 **Status**가 `Ready`인지 확인하세요.
-
-   <img src="lab-images/vm_migration--3.4.9_Ready_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 준비"></img> <br>
-<br>
-
-10. **Start**를 눌러 대화 상자가 나타나면 다시 **Start**를 눌러 세 개의 가상머신에 대하여 마이그레이션을 시작 합니다.
-
-    <img src="lab-images/vm_migration--3.4.10_start_plan.png" title="100px" alt="VMware 마이그레이션 시작"></img> <br>
+   <img src="new_images/125_vm_mig_running.png" title="100px" alt="VMware 마이그레이션 계획 스토리지"></img> <br>
 <br>
 
 11. 마이그레이션이 진행되는 것을 확인합니다.
 
-    <img src="lab-images/vm_migration--3.4.11.1_Progress_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 진행"></img> <br>
-
     진행 중인 마이그이션 (디스크 크기 및 네트워크에 따라 디스크를 복사하는 시간이 걸립니다)
-    <img src="lab-images/vm_migration--3.4.11.2_Progress_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 진행2"></img> <br>
+    <img src="new_images/125_vm_mig_running.png" title="100px" alt="VMware 마이그레이션 계획 진행2"></img> <br>
 
     시간이 지나면 마이그레이션이 완료됩니다.
     <img src="lab-images/vm_migration--3.4.11.3_Completed_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 완료"></img> <br>
@@ -196,7 +172,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 > 많은 참가자가 동일한 작업을 병렬로 수행하면 이 작업이 실제 환경보다 느리게 수행될 수 있습니다. 기다려주십시오.
 <br>
 
-### 3.5 마이그레이션 가상머신 리뷰 및 구성
+### 3.4 마이그레이션 가상머신 리뷰 및 구성
 
 이제 가상머신이 마이그레이션되었으며 오픈시프트 가상화에서 시작할 수 있습니다. VMware vCenter에서와 마찬가지로 가상머신 콘솔에 연결하고 상호 작용할 수 있습니다.
 

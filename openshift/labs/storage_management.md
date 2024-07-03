@@ -47,9 +47,9 @@
    <img src="new_images/84_crd.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
 <br>
 
-2. 위의 **Name**에 **datasource**를 검색합니다.
+2. 위의 **Name**에 `datasource`를 검색합니다.
 
-   <img src="new_images/85_datasource.png" height="75%" width="75%" title="100px" alt="프로젝트 선택"></img> <br> 
+   <img src="new_images/85_datasource.png" title="100px" alt="데이터소스 검색"></img> <br> 
 <br>
 
 3. 인스턴스 탭을 선택하면 오픈시프트 가상화가 자동으로 생성한 데이터소스(부팅소스)를 나열합니다.

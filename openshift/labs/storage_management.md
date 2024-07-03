@@ -122,17 +122,17 @@
 
 1. **Virtualization** → **VirtualMachines**으로 다시 이동하여 `vmexamples` 프로젝트에서 가상머신 `fedora02`를 선택합니다.
 
-   <img src="lab-images/storage_mgmt--3.2.1_VM_Overview.png" title="100px" alt="fedora02 가상머신 개요"></img> <br>
+   <img src="new_images/90_fedora02_project_select.png" title="100px" alt="fedora02 가상머신 개요"></img> <br>
 <br>
 
 2. **스냅샷(Snapshots)** 탭으로 이동하여 **Take snapshot**을 누릅니다.
 
-   <img src="lab-images/storage_mgmt--3.2.2_VM_Snapshots_Tab.png" title="100px" alt="가상머신의 스냅샷 탭"></img> <br>
+   <img src="new_images/92_fedora02_take_snapshot.png" title="100px" alt="가상머신의 스냅샷 탭"></img> <br>
 <br>
 
 3. 대화상자의 **Name**에는 `fedora02-snap`을 입력하고 **Save**를 누릅니다.
 
-   <img src="lab-images/storage_mgmt--3.2.3_VM_Snapshot_Dialog.png" title="100px" alt="가상머신 스냅샷 대화창"></img> <br>
+   <img src="new_images/93_fedora02_snapshot.png" title="100px" alt="가상머신 스냅샷 대화창"></img> <br>
 
 > [!NOTE]
 > `cloudinitdisk`가 스냅샷에 포함되지 않는다는 경고가 표시됩니다. 이는 임시(ephemeral) 디스크이기 때문에 예상되는 현상이며 발생합니다.
@@ -140,28 +140,28 @@
 
 4. **Save**를 누르고 *스냅샷(Snapshot)* 이 생성되면 **Status** 가 `Succeeded`으로 표시될 때까지 기다립니다.
 
-   <img src="lab-images/storage_mgmt--3.2.4_VM_Snapshot_Taken.png" title="100px" alt="가상머신의 스냅샷 확인"></img> <br>
+   <img src="new_images/94_fedora02_snapshot_success.png" title="100px" alt="가상머신의 스냅샷 확인"></img> <br>
 <br>
 
 5. 세 개의 점을 누르고 가상머신이 실행 중이므로 **Restore** 옵션이 회색으로 표시되는지 확인합니다.
 
-   <img src="lab-images/storage_mgmt--3.2.5_VM_Restore_Disabled.png" title="100px" alt="가상머신 복구 옵션 확인"></img> <br>
+   <img src="new_images/95_fedora02_snapshot_menu.png" title="100px" alt="가상머신 복구 옵션 확인"></img> <br>
 <br>
 
 6. **Console** 탭으로 전환하여 실행 중인 가상머신을 수정합니다. 이 작은 수정으로 인해 가상머신이 중단되고 더 이상 부팅할 수 없습니다.
 
    사용자 `fedora`와 비밀번호 `ocpVirtIsGre@t`(또는 이전 모듈에서 사용한 비밀번호)로 로그인합니다. 다음 명령을 실행합니다.
    ```bash
-   [fedora@fedora02 ~]$ sudo rm -rf /boot/grub2; sudo shutdown -r now
+   sudo rm -rf /boot/grub2; sudo shutdown -r now
    ```
    
    수정하면 가상머신이 중단되고 더 이상 부팅할 수 없습니다.
-   <img src="lab-images/storage_mgmt--3.2.6_crash_vm.png" title="100px" alt="가상머신 장애"></img> <br>
+   <img src="new_images/96_fedora02_rm_command.png" title="100px" alt="가상머신 장애"></img> <br>
 <br>
 
 7. *가상머신*을 부팅할 수 없습니다.
 
-   <img src="lab-images/storage_mgmt--3.2.7_VM_Crashed.png" title="100px" alt="가상머신 장애 확인"></img> <br>
+   <img src="new_images/97_fedora02_booting_error.png" title="100px" alt="가상머신 장애 확인"></img> <br>
 
 > [!IMPORTANT]
 > 이전 단계에서는 운영체제가 게스트 내에서 종료되었습니다. 그러나 오픈시프트 가상화는 기본적으로 자동으로 다시 시작합니다. 이 동작은 전체적으로 또는 가상머신 별로 변경할 수 있습니다.
@@ -169,7 +169,7 @@
 
 8. **Actions** 드롭다운 메뉴의 **Stop**을 누르고 *가상머신*을 중지합니다. 가상머신이 중지될 때까지 기다립니다.
 
-   <img src="lab-images/storage_mgmt--3.2.8.1_stop_vm.png" title="100px" alt="가상머신 정지"></img> <br>
+   <img src="new_images/98_fedora02_vm_stop.png" title="100px" alt="가상머신 정지"></img> <br>
 
    **Overview** 탭에서 가상머신지 중지된 것을 확인합니다.
    <img src="lab-images/storage_mgmt--3.2.8.2_vm_stopped.png" title="100px" alt="가상머신 정지 확인"></img> <br>

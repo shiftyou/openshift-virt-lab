@@ -78,21 +78,21 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 4. 프로젝트가 `vxexamples`인 것을 확인하고 **Create VirtualMachine**을 클릭합니다.
 
-   <img src="lab-images/virt_basic--2.1.4.1_create_vm.png" title="100px" alt="가상머신 생성하기"></img> <br>
+   <img src="new_images/07_vmexamples_project.png" title="100px" alt="가상머신 생성하기"></img> <br>
 
    사용 가능한 사전 정의된 가상머신 템플릿을 보여주는 대시보드가 나타납니다.
-   <img src="lab-images/virt_basic--2.1.4.2_Create_VM_Templates.png" title="100px" alt="가상머신 템플릿 생성하기"></img> <br>
+   <img src="new_images/08_vm_catalogs.png" title="100px" alt="가상머신 템플릿 생성하기"></img> <br>
    사용 가능한 템플릿 목록을 검토하면 일부 템플릿에는 "Source available"을 나타내는 파란색 배지가 있음을 알 수 있습니다. 자동으로 다운로드되어 저장된 템플릿 디스크를 사용하는 템플릿입니다. 자체 환경에 배포하는 경우 이러한 소스 디스크가 생성되지 않도록 방지하고 해당 소스 디스크를 제거한 다음 조직을 위한 사용자 지정 디스크를 생성하고 업로드할 수 있는 옵션이 있습니다.
 <br>
 
 5. 찾기에서 fedora 입력하여 **Fedora VM** 타일을 선택합니다.
 
-   <img src="lab-images/virt_basic--2.1.5_select_fedora_vm.png" title="100px" alt="페도라 가상머신 템플릿 찾기"></img> <br> 
+   <img src="new_images/09_fedora.png" title="100px" alt="페도라 가상머신 템플릿 찾기"></img> <br> 
 <br>
 
 6. **Fedora VM** 템플릿 대화 상자를 확인합니다.
 
-   <img src="lab-images/virt_basic--2.1.6_Create_VM_Quick.png" title="100px" alt="페도라 가상머신 템플릿"></img> <br> 
+   <img src="new_images/11_change_fedora_name.png" title="100px" alt="페도라 가상머신 템플릿"></img> <br> 
 <br>
 
 7. 이름을 `fedora01`로 변경하고 **Quick create VirtualMachine**을 누릅니다.

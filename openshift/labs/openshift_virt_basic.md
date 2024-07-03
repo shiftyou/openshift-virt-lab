@@ -22,18 +22,18 @@
 Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에 대한 상태 정보와 함께 사용된 가상머신 및 리소스에 대한 클러스터 수준 보기를 제공합니다. 오픈시프트 가상화에서 일어나는 일을 빠르고 개괄적으로 파악하려는 관리자에게 유용한 시작점입니다.
 
 1. 왼쪽 탐색 메뉴에서 **Virtualization** → **Overview**로 이동합니다. 
-   <img src="lab-images/virt_basic--1.1_create_overview.png" title="100px" alt="가상머신 생성하기 개요"></img> <br> 
+   <img src="new_images/01_overview.png" title="100px" alt="가상머신 생성하기 개요"></img> <br> 
    Overview 페이지는 오픈시프트 가상화 관리자에게 클러스터에 있는 가상머신의 글로벌 개요를 제공합니다. 일반 사용자는 자신의 프로젝트에 있는 가상머신만 볼 수 있습니다.
 
 > [!NOTE]
-> `Getting started resources` 패널이 표시되면, 해당 링크를 사용하여 가상머신을 생성하고 가상머신에 대한 사용자 지정 부팅 소스를 업로드하는 방법에 대한 단계별 안내를 하는 Quick Starts를 포함하여 오픈시프트 가상화에 대한 자세한 정보에 액세스할 수 있습니다. 패널 오른쪽 상단에 있는 점 3개 메뉴를 사용하여 패널을 숨길 수 있습니다. <img src="lab-images/virt_basic--1.1.NOTE_create_quickstarts.png" title="100px" alt="가상머신 생성하기 퀵스타트"></img>
+> `Getting started resources` 패널이 표시되면, 해당 링크를 사용하여 가상머신을 생성하고 가상머신에 대한 사용자 지정 부팅 소스를 업로드하는 방법에 대한 단계별 안내를 하는 Quick Starts를 포함하여 오픈시프트 가상화에 대한 자세한 정보에 액세스할 수 있습니다. 패널 오른쪽 상단에 있는 점 3개 메뉴를 사용하여 패널을 숨길 수 있습니다. <img src="new_images/02_quick_starts.png" title="100px" alt="가상머신 생성하기 퀵스타트"></img>
 <br>
 
 2. **Virtualization** → **Top consumers**를 검토합니다.
    
    페이지에서 아래로 스크롤하면 CPU, 메모리, 스토리지를 비롯한 다양한 리소스의 "최상위 소비자(Top consumers)"인 가상머신이 표시됩니다. 새로 생성된 클러스터에는 소비자가 없으므로 처음에는 볼 것이 거의 없습니다. "View virtualization dashboard"를 클릭하여 측정항목을 더 자세히 알아볼 수도 있습니다. 그러면 더 많은 데이터와 그래프가 포함된 KubeVirt 측정항목 대시보드가 표시됩니다.
 
-   <img src="lab-images/virt_basic--1.2_create_overview_consumers.png" title="100px" alt="상위 소비자 가상머신"></img> <br> 
+   <img src="new_images/03_top_consumers.png" title="100px" alt="상위 소비자 가상머신"></img> <br> 
 
 > [!IMPORTANT]
 > 여기에 리소스가 표시되지 않으면 랩에서 가상머신이 시작되지 않은 것입니다. Overview 세부정보를 보려면 이 세그먼트 이후에 이 페이지를 다시 방문하세요.

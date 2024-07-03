@@ -246,22 +246,22 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 5. 템플릿과 관련된 기본 구성을 보여주는 대화 상자가 나타납니다.
 
-   <img src="lab-images/virt_basic--2.3.5_Windows_2k9_Dialog.png" title="100px" alt="윈도우 2019 템플릿 대화창"></img> <br>
+   <img src="new_images/30_window_vm_customize.png" title="100px" alt="윈도우 2019 템플릿 대화창"></img> <br>
 <br>
 
 6. **Customize VirtualMachine**을 눌러 프로비저닝에 사용할 매개변수를 지정하는 대화 상자를 확인합니다.
 
-   <img src="lab-images/virt_basic--2.3.6_Windows_2k9_Parameters.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
+   <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
 <br>
 
 7. 이 대화 상자에서 **Name** 필드에 `windows`로 이름을 입력합니다.
    
-   <img src="lab-images/virt_basic--2.3.7_Cust_template_paras_name_section.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 이름 섹션"></img> <br>
+   <img src="new_images/31_vm_change_name.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 이름 섹션"></img> <br>
 <br>
 
 8. **Storage** 섹션에서 다음을 지정합니다.
    
-   <img src="lab-images/virt_basic--2.3.8_Cust_template_paras_storage_section.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 스토리지 섹션"></img> <br>
+   <img src="new_images/32_boot_disk.png" height="70%" width="70%" title="100px" alt="윈도우 2019 템플릿 패러미터 - 스토리지 섹션"></img> <br>
 
    1. `Boot from CD` 체크박스를 활성화
    2. **CD Source**를 URL로 선택

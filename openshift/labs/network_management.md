@@ -48,9 +48,10 @@
 <br>
 
 2. 다음과 같이 `vmexamples` 프로젝트에 대한 설정을 **Edit YAML**을 선택하여 아래 내용으로 대체한 후, **Save**를 클릭 합니다.
+    <img src="new_images/75_nework_yaml_update.png" title="100px" alt="Network Attachment Definition YAML"></img> <br> 
    아래 내용을 복사하여 내용을 대체합니다.
 
-`apiVersion: k8s.cni.cncf.io/v1
+```apiVersion: k8s.cni.cncf.io/v1
 kind: NetworkAttachmentDefinition
 metadata:
   annotations:
@@ -65,7 +66,7 @@ spec:
       "type": "ovn-k8s-cni-overlay",
       "topology": "localnet",
       "netAttachDefName": "vmexamples/vlan0"
-    }`
+    }```
 
 
    <img src="new_images/74_networkattachment_edit_yaml.png" title="100px" alt="Network Attachment Definition 생성"></img> <br> 

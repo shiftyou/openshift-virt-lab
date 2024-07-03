@@ -55,28 +55,23 @@
 3. 인스턴스 탭을 선택하면 오픈시프트 가상화가 자동으로 생성한 데이터소스(부팅소스)를 나열합니다.
 
    <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="PVC 리스트"></img> <br>
-<br>
 
 4. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 해당 부팅소스에 대한 상세 정보를 확인 할 수 있습니다.
-      <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="상세 정보 리스트"></img> <br>
-<br>
+   <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="상세 정보 리스트"></img> <br>
 
 5. 레드햇은 해당 부팅소스에 포함된 골든 이미지를 크론 잡 스케줄링을 통해 주기적으로 동기화 합니다. <br>
 
 **사용자 지정 리소스 정의(CustomResourceDefinitions)** 에서 **Name**에 **dataimport**를 검색합니다.
 
-      <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimport"></img> <br>
-<br>
+   <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimport"></img> <br>
 
 6. 인스턴스 탭을 선택하면 오픈시프트 가상화가 주기적으로 갱신하는 골든 이미지 목록을 확일 할 수 있습니다.
 
-          <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons"></img> <br>
-<br>
+<img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons"></img> <br>
 
 7. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 상세 정보를 통해 **골든 이미지의 Source** 정보와 **Cron Job** 주기를 확인 할 수 있습니다.
 
-             <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons fedora 상세 정보"></img> <br>
-<br>
+<img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons fedora 상세 정보"></img> <br>
 
 8. 가상머신이 생성되면 부팅 소스 이미지가 복제되고 새 디스크가 생성됩니다. `vmexamples` 프로젝트로 전환하고 PVC(디스크) 목록을 검토합니다.
 

@@ -136,7 +136,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 3. `fedora` 사용자와 표시된 비밀번호를 사용하여 가상머신에 로그인합니다.
 
-   <img src="lab-images/virt_basic--2.2.1.3_Input_id_pw.png"" title="100px" alt="사용자 ID와 암호 입력"></img> <br> 
+   <img src="new_images/16_fedora_console_02.png" title="100px" alt="사용자 ID와 암호 입력"></img> <br> 
 
 > [!IMPORTANT]
 > 비밀번호를 복사한 후 `붙여넣기(Paste)`를 클릭하여 비밀번호를 붙여넣을 수 있습니다.

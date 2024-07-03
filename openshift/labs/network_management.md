@@ -47,13 +47,11 @@
 > 프로젝트 `vmexamples`를 선택합니다.
 <br>
 
-2. 다음과 같이 `vmexamples` 프로젝트에 대한 양식을 작성한 후 **만들기**를 클릭합니다.
+2. 다음과 같이 `vmexamples` 프로젝트에 대한 설정을 **Edit YAML**을 선택하여 아래 내용으로 대체한 후, **Save**를 클릭 합니다.
 
-   * **이름**: `flatnetwork`
-   * **Network Type**: `CNV Linux Bridge`
-   * **Bridge Name**: `br-flat`
 
-   <img src="lab-images/network_mgmt--2.2_NAD_Create.png" title="100px" alt="Network Attachment Definition 생성"></img> <br> 
+
+   <img src="new_images/74_networkattachment_edit_yaml.png" title="100px" alt="Network Attachment Definition 생성"></img> <br> 
 
    호스트의 단일 리눅스 브리지에는 다양한 VLAN이 있을 수 있습니다. 이 시나리오에서는 별도의 호스트 인터페이스와 브리지가 아닌 각 항목에 대한 Network Attachment Definition만 생성하면 됩니다.
    

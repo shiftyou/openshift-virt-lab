@@ -251,9 +251,6 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 6. **Customize VirtualMachine**을 눌러 프로비저닝에 사용할 매개변수를 지정하는 대화 상자를 확인합니다.
 
-   <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
-<br>
-
 7. 이 대화 상자에서 **Name** 필드에 `windows`로 이름을 입력합니다.
 
 8. **Storage** 섹션에서 다음을 지정합니다.
@@ -266,6 +263,9 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 10. `Mount Windows drivers disk`가 활성화되어 있는지 확인합니다. 이는 VirtIO용 드라이버를 제공하는 윈도우 시스템을 설치하는 데 필요합니다.
 
+   <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
+<br>
+
 11. 매개변수를 입력이 완료되면 **Customize VirtualMachine을**를 누르고, 변경한 이름과 Boot Disk 설정을 확인합니다.
 
     <img src="new_images/32_window_vm_setting.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
@@ -275,6 +275,10 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
     <img src="new_images/32_boot_disk.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
+13. **Use this disk as a boot source**의 체크박스를 선택하고 **Save**를 누릅니다.
+
+    <img src="new_images/32_window_vm_setting.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
+<br>
 
 14. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
 

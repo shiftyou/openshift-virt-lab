@@ -172,22 +172,22 @@
    <img src="new_images/98_fedora02_vm_stop.png" title="100px" alt="가상머신 정지"></img> <br>
 
    **Overview** 탭에서 가상머신지 중지된 것을 확인합니다.
-   <img src="lab-images/storage_mgmt--3.2.8.2_vm_stopped.png" title="100px" alt="가상머신 정지 확인"></img> <br>
+   <img src="new_images/99_fedora02_vm_stop_confirm.png" title="100px" alt="가상머신 정지 확인"></img> <br>
 <br>
 
 9. **Snapshots** 탭으로 다시 이동하여 이전에 생성된 스냅샷에서 **Restore**을 누릅니다.
 
-   <img src="lab-images/storage_mgmt--3.2.9_VM_Restore.png" title="100px" alt="가상머신 복구"></img> <br>
+   <img src="new_images/100_fedora02_vm_snapshot_restore.png" title="100px" alt="가상머신 복구"></img> <br>
 <br>
 
 10. 표시된 대화 상자에서 **Restore** 을 누릅니다.
 
-    <img src="lab-images/storage_mgmt--3.2.10_VM_Restore_Dialog.png" title="100px" alt="가상머신 복구 대화창"></img> <br>
+    <img src="new_images/101_fedora02_vm_snapshot_restore_02.png" title="100px" alt="가상머신 복구 대화창"></img> <br>
 <br>
 
 11. 가상머신이 복원될 때까지 기다린 후 복원된 것을 확인합니다.
 
-    <img src="lab-images/storage_mgmt--3.2.11_VM_Restored.png" title="100px" alt="복구된 가상머신"></img> <br>
+    <img src="new_images/102_fedora02_snapshot_restore_status.png" title="100px" alt="복구된 가상머신"></img> <br>
 <br>
 
 12. Actions 메뉴에서 **Start**를 누르고 가상머신이 시작되기를 기다립니다.
@@ -197,7 +197,7 @@
 
 13. Console 탭으로 이동하여 가상머신이 다시 올바르게 부팅되는지 확인합니다.
     
-    <img src="lab-images/storage_mgmt--3.2.13_VM_Running.png" title="100px" alt="실행 중인 가상머신 확인"></img> <br>
+    <img src="new_images/103_fedora02_vm_restart_confirm.png" title="100px" alt="실행 중인 가상머신 확인"></img> <br>
 <br>
 <br>
 
@@ -208,7 +208,7 @@
 
 1. **Actions** 메뉴에서 **Clone**을 누르면 대화 상자가 열립니다.
 
-   <img src="lab-images/storage_mgmt--4.1_clone_vm.png" title="100px" alt="가상머신 복제 메뉴"></img> <br>
+   <img src="new_images/104_fedora02_vm_clone.png" title="100px" alt="가상머신 복제 메뉴"></img> <br>
 
 > [!NOTE]
 > 가상머신의 전원이 켜져 있으면 복제를 수행하기 위해 가상머신이 중지됩니다. 가상머신의 스냅샷이 있는 경우 가상머신 전원을 끄지 않고도 스냅샷에서 복제본을 생성할 수도 있습니다.
@@ -216,12 +216,12 @@
 
 2. 가상머신 복제 대화 상자를 확인하고 **Clone**을 누릅니다.
 
-   <img src="lab-images/storage_mgmt--4.2_VM_Clone_Dialog.png" title="100px" alt="가상머신 복제 메뉴"></img> <br>
+   <img src="new_images/105_fedora02_vm_clone_name_change.png" title="100px" alt="가상머신 복제 메뉴"></img> <br>
 <br>
 
 3. 새 가상머신이 생성되고 디스크가 복제되며 자동으로 포털이 새 가상머신으로 리디렉션됩니다.
 
-   <img src="lab-images/storage_mgmt--4.3_VM_Cloned.png" title="100px" alt="복제된 가상머신"></img> <br>
+   <img src="new_images/106_fedora02_clone_complete.png" title="100px" alt="복제된 가상머신"></img> <br>
 
 > [!IMPORTANT]
 > 복제된 가상머신은 원본 가상머신과 동일한 ID를 갖게 되므로 가상머신과 상호 작용하는 애플리케이션 및 다른 클라이언트와 충돌이 발생할 수 있습니다. 외부 네트워크에 연결되어 있거나 동일한 프로젝트에 있는 가상머신을 복제할 때는 주의하세요.

@@ -54,47 +54,47 @@
 
 3. 인스턴스 탭을 선택하면 오픈시프트 가상화가 자동으로 생성한 데이터소스(부팅소스)를 나열합니다.
 
-   <img src="new_images/85_datasource_details.png" title="100px" alt="PVC 리스트"></img> <br>
+   <img src="new_images/85_datasource_details.png" title="100px" alt="부팅소스 리스트"></img> <br>
 
 4. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 해당 부팅소스에 대한 상세 정보를 확인 할 수 있습니다.
-   <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="상세 정보 리스트"></img> <br>
+   <img src="new_images/85_datasource_fedora_details.png" title="100px" alt="상세 정보 리스트"></img> <br>
 
 5. 레드햇은 해당 부팅소스에 포함된 골든 이미지를 크론 잡 스케줄링을 통해 주기적으로 동기화 합니다. <br>
 
 **사용자 지정 리소스 정의(CustomResourceDefinitions)** 에서 **Name**에 **dataimport**를 검색합니다.
 
-   <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimport"></img> <br>
+   <img src="new_images/86_dataimportcron.png" title="100px" alt="datacronimport"></img> <br>
 
 6. 인스턴스 탭을 선택하면 오픈시프트 가상화가 주기적으로 갱신하는 골든 이미지 목록을 확일 할 수 있습니다.
 
-<img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons"></img> <br>
+<img src="new_images/86_dataimportcron_fedora.png" title="100px" alt="datacronimportcrons"></img> <br>
 
 7. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 상세 정보를 통해 **골든 이미지의 Source** 정보와 **Cron Job** 주기를 확인 할 수 있습니다.
 
-<img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons fedora 상세 정보"></img> <br>
+<img src="new_images/86_dataimportcron_fedora_details.png" title="100px" alt="datacronimportcrons fedora 상세 정보"></img> <br>
 
 8. 가상머신이 생성되면 부팅 소스 이미지가 복제되고 새 디스크가 생성됩니다. `vmexamples` 프로젝트로 전환하고 PVC(디스크) 목록을 검토합니다.
 
    이 프로젝트의 가상머신 용 각 디스크에 대한 PVC와 이 워크숍의 이전 섹션에서 생성된 Microsoft Windows Server 2019 디스크 이미지용 PVC가 표시됩니다. 원하는 경우 마이크로소프트 윈도우 ISO와 함께 이 PVC를 다른 가상 머신에서 재사용하여 운영 체제를 설치할 수 있습니다.
 
-   <img src="lab-images/storage_mgmt--2.5_List_PVCs_VMs.png" title="100px" alt="PVC를 사용하는 가상머신 리스트"></img> <br>
+   <img src="new_images/86_pvc_details.png" title="100px" alt="PVC를 사용하는 가상머신 리스트"></img> <br>
 <br>
 
 6. 정보를 얻으려면 `fedora02`를 선택하십시오.
 
-   <img src="lab-images/storage_mgmt--2.6_PVC_VM_Info.png" title="100px" alt="PVC 상세 정보"></img> <br>
+   <img src="new_images/87_fedora02_pvc_details.png" title="100px" alt="PVC 상세 정보"></img> <br>
 <br>
 
 7. *영구 볼륨 클레임(Persistent Volume Claim)*은 볼륨을 프로비저닝하기 위해 특정 *스토리지 클래스(Storage class)* 또는 기본 스토리지 클래스를 신청합니다. 
 
    목록을 얻으려면 **스토리지** → **영구 볼륨**로 이동하십시오. **Claim** 기준으로 정렬합니다.
 
-   <img src="lab-images/storage_mgmt--2.7_PV_List.png" title="100px" alt="PV 리스트"></img> <br>
+   <img src="new_images/88_pv.png" title="100px" alt="PV 리스트"></img> <br>
 <br>
 
 8. 이제 **Virtualization** → **Bootable volumes**으로 이동하여 사용 가능한 볼륨 목록을 얻습니다.
 
-   <img src="lab-images/storage_mgmt--2.8_List_Bootable_Volumes.png" title="100px" alt="부팅 가능한 볼륨 리스트"></img> <br>
+   <img src="new_images/89_bootable_volumes.png" title="100px" alt="부팅 가능한 볼륨 리스트"></img> <br>
 <br>
 <br>
 

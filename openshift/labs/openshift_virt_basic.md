@@ -251,9 +251,6 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 6. **Customize VirtualMachine**을 눌러 프로비저닝에 사용할 매개변수를 지정하는 대화 상자를 확인하고, 매개변수를 다음과 같이 수정합니다.
 
-   <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
-<br>
-
 7. 이 대화 상자에서 **Name** 필드에 `windows`로 이름을 입력합니다.
 
 8. **Storage** 섹션에서 다음을 지정합니다.
@@ -265,6 +262,10 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 9. **Disk source**를 그대로 두고 하단의 **Disk size**의 값도 기본값인 **60GiB**로 유지합니다.
 
 10. `Mount Windows drivers disk`가 활성화되어 있는지 확인합니다. 이는 VirtIO용 드라이버를 제공하는 윈도우 시스템을 설치하는 데 필요합니다.
+
+   <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
+<br>
+
 
 11. 매개변수를 입력이 완료되면 **Customize VirtualMachine을**를 누르고, 변경한 이름과 Boot Disk 설정을 확인합니다.
 
@@ -287,7 +288,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 15. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
 
-    <img src="lab-images/virt_basic--2.3.13_sysprep.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
+    <img src="new_images/35_win_sysprep.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 
     `autounattend.xml` 파일   
     ```xml
@@ -431,7 +432,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 16. 대화 상자에서 **저장(Save)** 을 클릭합니다.
 
-    <img src="lab-images/virt_basic--2.3.14_Windows_2k9_Sysprep.png" title="100px" alt="윈도우 2019 템플릿 sysprep"></img> <br>
+    <img src="new_images/36_win_sysprep_config.png" title="100px" alt="윈도우 2019 템플릿 sysprep"></img> <br>
 <br>
 
 17. **Autounattend.xml answer file**에 설정된 값을 확인 후 **Create VirtualMachine**을 누릅니다.

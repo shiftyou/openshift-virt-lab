@@ -68,13 +68,13 @@
 
 7. 가상 머신의 리소스 할당을 조정하기 위해 **CPU | Memory** 링크를 클릭하고, CPU 수를 2로, 메모리를 4GiB로 변경합니다.
 
-   <img src="lab-images/virt_cust--2.8_set_cpu_and_memory.png" title="100px" alt="가상머신 사용자 정의 CPU / Memory 설정"></img> <br>
+   <img src="new_images/51_change_resource2.png" title="100px" alt="가상머신 사용자 정의 CPU / Memory 설정"></img> <br>
    변경 후 **Save**를 누릅니다.
 <br>
 
 8. **Scheduling** 탭으로 이동하여 수정하지 않고 사용 가능한 옵션을 검토합니다.
 
-   <img src="lab-images/virt_cust--2.9_Wizard_Scheduling.png" title="100px" alt="가상머신 사용자 정의 스케줄링 확인"></img> <br>
+   <img src="new_images/52_scheduling.png" title="100px" alt="가상머신 사용자 정의 스케줄링 확인"></img> <br>
 
    * **Node selector**는 가상머신이 실행될 수 있는 하나 이상의 클러스터 노드를 지정하는 데 사용됩니다. 이름, 레이블 또는 주석별로 선택할 수 있습니다.
    * **Tolerations**는 클러스터 노드에 taint(손상/오염)이 적용된 경우에 사용됩니다. Taint(손상/오염)은 이를 허용하는 특정 워크로드만 노드에서 실행되도록 허용해야 함을 나타내는 지표입니다. 예를 들어 GPU가 있는 노드가 일부만 있는 경우에, GPU를 사용하는 가상머신만 해당 노드에서 실행할 수 있도록 하는 경우에 유용합니다.
@@ -86,15 +86,15 @@
 
 11. **Network Interfaces** 탭으로 이동하여 기본적으로 가상머신이 `Pod networking`(오픈시프트 내부 네트워킹)에 연결되어 있는지 확인합니다.
 
-    <img src="lab-images/virt_cust--2.10_Wizard_Networking.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스"></img> <br>
+    <img src="new_images/53_networking_interfaces.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스"></img> <br>
 <br>
 
 12. 세 개의 수직 점 아이콘을 클릭하여 `default`을 편집하고 기본 옵션을 검토합니다.
 
-    <img src="lab-images/virt_cust--2.11.1_select_Wizard_Networking_Options.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션 선택"></img> <br>
+    <img src="lnew_images/53_networking_interfaces_default.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션 선택"></img> <br>
 
     **Edit network interface** 대화창을 확인합니다.
-    <img src="lab-images/virt_cust--2.11.2_Wizard_Networking_Options.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션"></img> <br>
+    <img src="new_images/54_confirm.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션"></img> <br>
 
     * **Model**은 사용될 네트워크 어댑터의 유형을 나타냅니다. `virtio`는 반가상화 NIC인 반면 e1000 및 기타는 에뮬레이트된 장치입니다.
     * 사용 가능한 다른 네트워크가 없기 때문에 **네트워크(Network)** 가 회색으로 표시됩니다. 이 워크숍의 향후 모듈에서는 가상머신용 추가 네트워크를 추가하고 이를 사용하겠습니다.
@@ -106,17 +106,17 @@
 
 13. **Disks** 탭으로 이동하여 가상머신에 할당된 장치를 확인합니다.
 
-    <img src="lab-images/virt_cust--2.12_Wizard_Storage.png" title="100px" alt="가상머신 사용자 정의 스토리지"></img> <br>
+    <img src="new_images/55_fedora_disks.png" title="100px" alt="가상머신 사용자 정의 스토리지"></img> <br>
 
     가상머신을 만들기 전에 새 디스크를 추가하고 기본 디스크를 수정할 수 있습니다. 또한 *Storage class*와 부팅 *Source*(예: ISO에서 부팅)를 수정하고 *Interface*를 기본 `virtio`로 사용하는 대신 디스크 인터페이스를 정의할 수 있습니다.
 <br>
 
 14. 세 개의 수직 점 아이콘을 클릭하여 `루트디스크(rootdisk)`를 편집하고 기본 옵션을 검토합니다.
 
-    <img src="lab-images/virt_cust--2.13.1_open_Wizard_Storage_settings.png" title="100px" alt="가상머신 사용자 정의 스토리지 설정"></img> <br>
+    <img src="new_images/56_fedora_disk_edit.png" title="100px" alt="가상머신 사용자 정의 스토리지 설정"></img> <br>
     
     **Edit disk** 대화창에 다음 값을 입력합니다.
-    <img src="lab-images/virt_cust--2.13.2_Wizard_Storage_settings.png" title="100px" alt="가상머신 사용자 정의 스토리지 설정"></img> <br>
+    <img src="new_images/57_confirm.png" title="100px" alt="가상머신 사용자 정의 스토리지 설정"></img> <br>
 
     * **PertantVolumeClaim size**는 가상머신에 연결된 디스크의 크기입니다. 디스크 소스가 다른 PVC인 경우 소스보다 작을 수 없습니다. 그렇지 않으면 가져오는 QCOW2 또는 ISO를 저장할 수 있을 만큼 충분히 큰지 확인해야 합니다.
     * 디스크 **Type**은 예를 들어 CD-ROM 장치로 변경될 수 있습니다.

@@ -41,7 +41,7 @@
 
 1. **네트워킹** → **NetworkAttachmentDefinitions**로 이동하고 **Create network attachment definition**을 클릭 합니다.
 
-   <img src="lab-images/network_mgmt--2.1_NAD_Dashboard.png" title="100px" alt="Network Attachment Definition 대시보드"></img> <br> 
+   <img src="new_images/74_networkattachment.png" title="100px" alt="Network Attachment Definition 대시보드"></img> <br> 
 
 > [!IMPORTANT]
 > 프로젝트 `vmexamples`를 선택합니다.

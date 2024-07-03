@@ -86,17 +86,17 @@ spec:
 
 ## 3. 외부 네트워크 가상머신 연결
 
-1. **Virtualization** → **VirtualMachines**으로 이동하여 `fedora02` 가상머신을 선택합니다. **Configuration** 탭을 클릭한 다음 **Network Interfaces** 하위 탭을 클릭합니다.
+1. **Virtualization** → **VirtualMachines**으로 이동하여 `fedora02` 가상머신을 선택합니다. **Configuration** 탭을 클릭한 다음 **Network** 메뉴를 클릭하고, **Add network interface**를 클릭합니다.
+   <img src="new_images/77_fedora02_network_add.png" title="100px" alt="하부 탭인 네트워크 인터페이스 확인"></img> <br>
+<br>
+  VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본으로 사용하고 있음을 알 수 있습니다. <br>
+  대부분의 경우 단일 OVS Bridge는 각각의 고유 지정된 **VLAN** 태그 번호가 있는 여러 네트워크 연결 정의를 지원할 수 있습니다. 이 실습에서는 태그가 지정되지 않은 네트워크를 사용하므로 VLAN 번호가 필요하지 않으므로 연결 정의는 **vlan0**으로 레이블이 지정됩니다. 이 기존 연결을 수정하거나 VM에 새 인터페이스를 추가할 수 있으며, 작업 이후에는 VM을 다시 시작해야 합니다.<br>
 
-   <img src="lab-images/network_mgmt--3.1_VM_Network_Tab.png" title="100px" alt="하부 탭인 네트워크 인터페이스 확인"></img> <br>
+2. 위에서 생성한 `vmexamples/vlan01 네트워크 연결 정의를 추가하고, **Save**를 클릭합니다.
+
+   <img src="new_images/78_fedora02_network_add_vlan.png" title="100px" alt="네트워크 인터페이스 세부 설정"></img> <br>
 <br>
 
-2. **Add network interface**를 클릭하고 표시된 대로 양식을 작성한 다음 **Save**를 클릭합니다.
-
-   이는 외부 네트워크에 연결되는 브리지이기 때문에 네트워크를 사용하는 가상머신에 대한 masquerade(NAT)와 같은 액세스를 활성화하기 위해 오픈시프트 기능이나 성능에 의존할 필요가 없습니다. 결과적으로 여기서 **Type**은 `Bridge`여야 합니다.
-
-   <img src="lab-images/network_mgmt--3.2_VM_Network_Attach.png" title="100px" alt="네트워크 인터페이스 세부 설정"></img> <br>
-<br>
 
 3. **Actions** 메뉴의 *Restart*를 클릭하여 가상머신을 다시 시작합니다. 
 

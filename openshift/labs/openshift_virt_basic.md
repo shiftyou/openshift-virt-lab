@@ -437,17 +437,17 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 17. **Autounattend.xml answer file**에 설정된 값을 확인 후 **Create VirtualMachine**을 누릅니다.
 
-    <img src="lab-images/virt_basic--2.3.15_Windows_2k9_Create.png" title="100px" alt="윈도우 2019 가상머신 생성"></img> <br>
+    <img src="new_images/37_win_vm_create.png" title="100px" alt="윈도우 2019 가상머신 생성"></img> <br>
 <br>
 
 18. 가상머신은 ISO 이미지를 다운로드하고 인스턴스를 구성 및 시작하여 프로비저닝 프로세스를 시작합니다.
 
-    <img src="lab-images/virt_basic--2.3.16_Windows_2k9_Provisioning.png" title="100px" alt="윈도우 2019 프로비저닝"></img> <br>
+    <img src="new_images/40_win_vm_provisioning.png" title="100px" alt="윈도우 2019 프로비저닝"></img> <br>
 <br>
 
 19. 몇 분 후에 가상머신의 Status 값이 `Running`으로 바뀝니다. **Console** 탭으로 전환합니다.
 
-    <img src="lab-images/virt_basic--2.3.17_Windows_2k9_Console.png" title="100px" alt="윈도우 2019 가상머신 콘솔"></img> <br>
+    <img src="new_images/41_win_console.png" title="100px" alt="윈도우 2019 가상머신 콘솔"></img> <br>
 
 > [!NOTE]
 > 이 워크숍에서는 설치가 완료될 때까지 기다릴 필요가 없습니다. 다음 모듈을 계속 진행할 수 있습니다.

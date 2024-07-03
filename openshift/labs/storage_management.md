@@ -42,34 +42,43 @@
 
 <br>
 
-1. **관리(Administration)** → **사용자 지정 리소스 정의(CustomResourceDefinitions)**으로 이동합니다.
+1. **관리(Administration)** → **사용자 지정 리소스 정의(CustomResourceDefinitions)** 으로 이동합니다.
 
    <img src="lab-images/storage_mgmt--2.1_Left_Menu.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
 <br>
 
-2. 프로젝트 드롭다운을 누르고 `기본 프로젝트 표시` 활성화 한 후 `openshift-virtualization-os-images` 프로젝트를 선택합니다.
+2. 위의 **Name**에 **datasource를 검색합니다.
 
    <img src="lab-images/storage_mgmt--2.2_Select_Project.png" height="75%" width="75%" title="100px" alt="프로젝트 선택"></img> <br> 
 <br>
 
-3. 오픈시프트 가상화가 자동으로 생성한 부팅 소스를 나열합니다.
+3. 인스턴스 탭을 선택하면 오픈시프트 가상화가 자동으로 생성한 데이터소스(부팅소스)를 나열합니다.
 
    <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="PVC 리스트"></img> <br>
 <br>
 
-4. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오.
-
-   이 실습에서 각 PVC는 OpenShift Data Foundation에서 제공하는 `ocs-storagecluster-ceph-rbd` 스토리지 클래스에서 가져옵니다. PVC의 세부정보를 보면 실시간 마이그레이션에 필요한 다음 정보를 확인할 수 있습니다.
-   <img src="lab-images/storage_mgmt--2.4_PVC_Info.png" title="100px" alt="PVC 정보"></img> <br>
-   * **볼륨 모드**: `Block`
-   * **액세스 모드**: `ReadWriteMany`
-   
-   모드는 스토리지 공급업체에 따라 `Block` 또는 `File`이 될 수 있으며 `RWX` 모드를 사용할 수 있는 한 둘 중 하나가 동일하게 작동합니다.
-
-   용량은 이 템플릿 디스크에서 생성된 모든 가상머신에서 사용할 기본 운영체제와 설치된 모든 패키지/소프트웨어를 수용할 수 있을 만큼 충분히 커야 합니다. 디스크를 복제하여 생성된 가상머신은 디스크 크기를 늘릴 수 있지만 줄일 수는 없습니다.
+4. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 해당 부팅소스에 대한 상세 정보를 확인 할 수 있습니다.
+      <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="상세 정보 리스트"></img> <br>
 <br>
 
-5. 가상머신이 생성되면 부팅 소스 이미지가 복제되고 새 디스크가 생성됩니다. `vmexamples` 프로젝트로 전환하고 PVC(디스크) 목록을 검토합니다.
+5. 레드햇은 해당 부팅소스에 포함된 골든 이미지를 크론 잡 스케줄링을 통해 주기적으로 동기화 합니다. <br>
+
+**사용자 지정 리소스 정의(CustomResourceDefinitions)** 에서 **Name**에 **dataimport**를 검색합니다.
+
+      <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimport"></img> <br>
+<br>
+
+6. 인스턴스 탭을 선택하면 오픈시프트 가상화가 주기적으로 갱신하는 골든 이미지 목록을 확일 할 수 있습니다.
+
+          <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons"></img> <br>
+<br>
+
+7. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 상세 정보를 통해 **골든 이미지의 Source** 정보와 **Cron Job** 주기를 확인 할 수 있습니다.
+
+             <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="datacronimportcrons fedora 상세 정보"></img> <br>
+<br>
+
+8. 가상머신이 생성되면 부팅 소스 이미지가 복제되고 새 디스크가 생성됩니다. `vmexamples` 프로젝트로 전환하고 PVC(디스크) 목록을 검토합니다.
 
    이 프로젝트의 가상머신 용 각 디스크에 대한 PVC와 이 워크숍의 이전 섹션에서 생성된 Microsoft Windows Server 2019 디스크 이미지용 PVC가 표시됩니다. 원하는 경우 마이크로소프트 윈도우 ISO와 함께 이 PVC를 다른 가상 머신에서 재사용하여 운영 체제를 설치할 수 있습니다.
 

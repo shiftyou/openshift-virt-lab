@@ -47,7 +47,7 @@
    <img src="new_images/45_fedora_select.png" title="100px" alt="Fedora 가상머신 템플릿 선택"></img> <br>
 <br>
 
-5. 열린 대화 상자에서 **Customzie VirtualMachine**을 클릭합니다.
+5. 열린 대화 상자에서 VM **Name**, **Book Disk** 정보등을 수정할 수 있습니다.
 
    <img src="new_images/46_fedora_customize.png" title="100px" alt="템플렛에서 가상머신 사용자 정의 클릭"></img> <br>
 <br>
@@ -58,16 +58,11 @@
    이 템플릿에는 이미 사용 가능한 디스크가 있지만 외부 웹 서버에서 다른 디스크를 가져오고 싶습니다. 이는 디스크 라이브러리에서 가상머신을 배포하기 위한 한 가지 옵션이지만 스토리지 공급자에 의존하여 디스크용 PVC 클론을 오프로드하는 것보다 느릴 수 있습니다. 여기에 사용된 QCOW2 디스크 이미지를 PVC로 가져와 가상머신 클론용 소스 디스크로 사용할 수도 있습니다. 이를 수행하는 방법에 대한 자세한 내용은 [설명서](https://docs.openshift.com/container-platform/4.13/virt/virtual_machines/importing_vms/virt-importing-virtual-machine-images-datavolumes.html)를 참조하십시오.
    
    1. 이름을 `fedora02`로 지정
-      <img src="lab-images/virt_cust--2.6.1_fedora_template_inpute_name.png" title="100px" alt="템플릿에 이름 입력"></img> <br>
 
    2. **Storage** 섹션에서 다음을 수행
       * **Disk Source**: URL (PVC를 생성하는)
       * **URL**: http://192.168.123.100:81/Fedora35.qcow2
       * **Disk size**: 30GiB
-      <img src="lab-images/virt_cust--2.6.2_fedora_template_set_storage.png" title="100px" alt="가상머신 부팅 소스 설정"></img> <br>
-
-   3. 설정 후 **Next**를 클릭합니다.
-<br>
 
 7. 템플릿의 기본 구성으로 **Overview** 탭을 검토합니다.
 

@@ -49,7 +49,7 @@
 
 5. 열린 대화 상자에서 **Customzie VirtualMachine**을 클릭합니다.
 
-   <img src="lab-images/virt_cust--2.5_Fedora.png" title="100px" alt="템플렛에서 가상머신 사용자 정의 클릭"></img> <br>
+   <img src="new_images/46_fedora_customize.png" title="100px" alt="템플렛에서 가상머신 사용자 정의 클릭"></img> <br>
 <br>
 
 6. 가상 머신 사용자 정의

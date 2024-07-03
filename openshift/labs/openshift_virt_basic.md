@@ -277,12 +277,12 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 13. **Use this disk as a boot source**의 체크박스를 선택하고 **Save**를 누릅니다.
 
-    <img src="new_images/32_window_vm_setting.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
+    <img src="new_images/31_boot_disk_order_change.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
 14. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
 
-    <img src="lab-images/virt_basic--2.3.12_Windows_2k9_Scripts.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
+    <img src="new_images/33_win_scripts.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 <br>
 
 15. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.

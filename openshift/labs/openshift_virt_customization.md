@@ -47,15 +47,11 @@
    <img src="new_images/45_fedora_select.png" title="100px" alt="Fedora 가상머신 템플릿 선택"></img> <br>
 <br>
 
-5. 열린 대화 상자에서 VM **Name**, **Book Disk** 정보등을 수정할 수 있습니다.
+5. 열린 대화 상자에서 VM **Name**, **Book Disk** 정보등을 수정하여 사용자 정의 할 수 있습니다.
+   이 템플릿에는 이미 사용 가능한 디스크가 있지만 외부 웹 서버에서 다른 디스크를 가져오고 싶습니다. 이는 디스크 라이브러리에서 가상머신을 배포하기 위한 한 가지 옵션이지만 스토리지 공급자에 의존하여 디스크용 PVC 클론을 오프로드하는 것보다 느릴 수 있습니다. 여기에 사용된 QCOW2 디스크 이미지를 PVC로 가져와 가상머신 클론용 소스 디스크로 사용할 수도 있습니다. 이를 수행하는 방법에 대한 자세한 내용은 [설명서](https://docs.openshift.com/container-platform/4.13/virt/virtual_machines/importing_vms/virt-importing-virtual-machine-images-datavolumes.html)를 참조하십시오.
 
    <img src="new_images/46_fedora_customize.png" title="100px" alt="템플렛에서 가상머신 사용자 정의 클릭"></img> <br>
 <br>
-
-6. 가상 머신 사용자 정의
-
-   <img src="lab-images/virt_cust--2.6.0_fedora_template.png" title="100px" alt="fedora 템플릿"></img> <br>
-   이 템플릿에는 이미 사용 가능한 디스크가 있지만 외부 웹 서버에서 다른 디스크를 가져오고 싶습니다. 이는 디스크 라이브러리에서 가상머신을 배포하기 위한 한 가지 옵션이지만 스토리지 공급자에 의존하여 디스크용 PVC 클론을 오프로드하는 것보다 느릴 수 있습니다. 여기에 사용된 QCOW2 디스크 이미지를 PVC로 가져와 가상머신 클론용 소스 디스크로 사용할 수도 있습니다. 이를 수행하는 방법에 대한 자세한 내용은 [설명서](https://docs.openshift.com/container-platform/4.13/virt/virtual_machines/importing_vms/virt-importing-virtual-machine-images-datavolumes.html)를 참조하십시오.
    
    1. 이름을 `fedora02`로 지정
 
@@ -64,18 +60,18 @@
       * **URL**: http://192.168.123.100:81/Fedora35.qcow2
       * **Disk size**: 30GiB
 
-7. 템플릿의 기본 구성으로 **Overview** 탭을 검토합니다.
+6. 템플릿의 기본 구성으로 **Overview** 탭을 검토합니다.
 
    <img src="lab-images/virt_cust--2.7_Wizard_General.png" title="100px" alt="가상머신 사용자 정의 개요 확인"></img> <br>
 <br>
 
-8. 가상 머신의 리소스 할당을 조정하기 위해 **CPU | Memory** 링크를 클릭하고, CPU 수를 2로, 메모리를 4GiB로 변경합니다.
+7. 가상 머신의 리소스 할당을 조정하기 위해 **CPU | Memory** 링크를 클릭하고, CPU 수를 2로, 메모리를 4GiB로 변경합니다.
 
    <img src="lab-images/virt_cust--2.8_set_cpu_and_memory.png" title="100px" alt="가상머신 사용자 정의 CPU / Memory 설정"></img> <br>
    변경 후 **Save**를 누릅니다.
 <br>
 
-9. **Scheduling** 탭으로 이동하여 수정하지 않고 사용 가능한 옵션을 검토합니다.
+8. **Scheduling** 탭으로 이동하여 수정하지 않고 사용 가능한 옵션을 검토합니다.
 
    <img src="lab-images/virt_cust--2.9_Wizard_Scheduling.png" title="100px" alt="가상머신 사용자 정의 스케줄링 확인"></img> <br>
 
@@ -87,12 +83,12 @@
    * **Descheduler**는 가상머신과 이를 실행 중인 호스트를 주기적으로 평가하여 다른 호스트로 마이그레이션해야 하는지 결정하는 오픈시프트의 기능입니다. 이는 리소스 최적화 이유나 선호도 규칙 위반 때문일 수 있습니다.
 <br>
 
-10. **Network Interfaces** 탭으로 이동하여 기본적으로 가상머신이 `Pod networking`(오픈시프트 내부 네트워킹)에 연결되어 있는지 확인합니다.
+11. **Network Interfaces** 탭으로 이동하여 기본적으로 가상머신이 `Pod networking`(오픈시프트 내부 네트워킹)에 연결되어 있는지 확인합니다.
 
     <img src="lab-images/virt_cust--2.10_Wizard_Networking.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스"></img> <br>
 <br>
 
-11. 세 개의 수직 점 아이콘을 클릭하여 `default`을 편집하고 기본 옵션을 검토합니다.
+12. 세 개의 수직 점 아이콘을 클릭하여 `default`을 편집하고 기본 옵션을 검토합니다.
 
     <img src="lab-images/virt_cust--2.11.1_select_Wizard_Networking_Options.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션 선택"></img> <br>
 
@@ -107,14 +103,14 @@
     현재 사용 가능한 다른 네트워크가 없으므로 `Cancel`를 눌러 대화 상자를 종료하세요.
 <br>
 
-12. **Disks** 탭으로 이동하여 가상머신에 할당된 장치를 확인합니다.
+13. **Disks** 탭으로 이동하여 가상머신에 할당된 장치를 확인합니다.
 
     <img src="lab-images/virt_cust--2.12_Wizard_Storage.png" title="100px" alt="가상머신 사용자 정의 스토리지"></img> <br>
 
     가상머신을 만들기 전에 새 디스크를 추가하고 기본 디스크를 수정할 수 있습니다. 또한 *Storage class*와 부팅 *Source*(예: ISO에서 부팅)를 수정하고 *Interface*를 기본 `virtio`로 사용하는 대신 디스크 인터페이스를 정의할 수 있습니다.
 <br>
 
-13. 세 개의 수직 점 아이콘을 클릭하여 `루트디스크(rootdisk)`를 편집하고 기본 옵션을 검토합니다.
+14. 세 개의 수직 점 아이콘을 클릭하여 `루트디스크(rootdisk)`를 편집하고 기본 옵션을 검토합니다.
 
     <img src="lab-images/virt_cust--2.13.1_open_Wizard_Storage_settings.png" title="100px" alt="가상머신 사용자 정의 스토리지 설정"></img> <br>
     
@@ -130,7 +126,7 @@
     확인 후 **Cancel**은 누릅니다.
 <br>
 
-14. **스크립트(Scripts)** 탭으로 이동합니다. 이 탭은 배포 시 cloud-init 또는 Sysprep과 같은 게스트 운영체제 사용자 지정을 적용하는 데 사용됩니다.
+15. **스크립트(Scripts)** 탭으로 이동합니다. 이 탭은 배포 시 cloud-init 또는 Sysprep과 같은 게스트 운영체제 사용자 지정을 적용하는 데 사용됩니다.
 
     <img src="lab-images/virt_cust--2.14_Wizard_Scripts.png" title="100px" alt="가상머신 사용자 정의 스크립트"></img> <br>
 
@@ -139,7 +135,7 @@
     * **Sysprep**은 호스트 이름, 기본 `관리자(Administrator)` 암호 및 Active Directory 도메인 가입과 같은 구성 설정을 포함하여 새 운영체제 배포를 자동으로 구성하기 위한 마이크로소프트 윈도우 도구입니다.
 <br>
 
-15. Fedora 가상머신을 위해 **Cloud-init** 섹션에서 **Edit**을 누릅니다.
+16. Fedora 가상머신을 위해 **Cloud-init** 섹션에서 **Edit**을 누릅니다.
 
     <img src="lab-images/virt_cust--2.15.1_cloud-init.png" title="100px" alt="가상머신 사용자 정의 스크립트 - cloud-init"></img> <br>
     
@@ -148,7 +144,7 @@
     여기서 해당 상자를 선택하여 네트워크 구성 정보를 지정할 수도 있습니다. 예를 들어 가상머신을 VLAN 네트워크에 직접 연결하고 고정 IP 주소를 구성하려는 경우에 유용합니다.
 <br>
 
-16. **Create VirtualMachine**을 눌러 생성 후 **Start this VirtualMachine after creation** 옵션이 선택되어 있는지 확인합니다.
+17. **Create VirtualMachine**을 눌러 생성 후 **Start this VirtualMachine after creation** 옵션이 선택되어 있는지 확인합니다.
 
     <img src="lab-images/virt_cust--2.16_Wizard_Review.png" title="100px" alt="가상머신 사용자 정의 생성 및 리뷰"></img> <br>
 

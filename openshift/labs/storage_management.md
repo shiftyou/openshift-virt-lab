@@ -44,17 +44,17 @@
 
 1. **관리(Administration)** → **사용자 지정 리소스 정의(CustomResourceDefinitions)** 으로 이동합니다.
 
-   <img src="lab-images/storage_mgmt--2.1_Left_Menu.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
+   <img src="new_images/84_crd.png" height="30%" width="30%" title="100px" alt="스토리지 관리 왼쪽 메뉴"></img> <br> 
 <br>
 
 2. 위의 **Name**에 **datasource**를 검색합니다.
 
-   <img src="lab-images/storage_mgmt--2.2_Select_Project.png" height="75%" width="75%" title="100px" alt="프로젝트 선택"></img> <br> 
+   <img src="new_images/85_datasource.png" height="75%" width="75%" title="100px" alt="프로젝트 선택"></img> <br> 
 <br>
 
 3. 인스턴스 탭을 선택하면 오픈시프트 가상화가 자동으로 생성한 데이터소스(부팅소스)를 나열합니다.
 
-   <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="PVC 리스트"></img> <br>
+   <img src="new_images/85_datasource_details.png" title="100px" alt="PVC 리스트"></img> <br>
 
 4. 자세한 정보를 얻으려면 목록에서 하나(예: `fedora-XX`)를 선택하십시오. 해당 부팅소스에 대한 상세 정보를 확인 할 수 있습니다.
    <img src="lab-images/storage_mgmt--2.3_List_PVCs.png" title="100px" alt="상세 정보 리스트"></img> <br>

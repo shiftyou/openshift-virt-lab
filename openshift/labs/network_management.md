@@ -47,7 +47,7 @@
 > 프로젝트 `vmexamples`를 선택합니다.
 <br>
 
-2. 다음과 같이 `vmexamples` 프로젝트에 대한 설정을 **Edit YAML**을 선택하여 아래 내용으로 대체한 후, **Save**를 클릭 합니다.
+2. 다음과 같이 `vmexamples` 프로젝트에 대한 설정을 **Edit YAML**을 선택하여 아래 내용으로 대체한 후, **Create**를 클릭 합니다.
     <img src="new_images/75_nework_yaml_update.png" title="100px" alt="Network Attachment Definition YAML"></img> <br> 
    아래 내용을 복사하여 내용을 대체합니다.
 
@@ -80,7 +80,7 @@ spec:
 
 3. *Network Attachment Definition*의 세부사항을 조사하십시오. `vmexamples` 프로젝트에서 생성되었기 때문에 다른 프로젝트에서는 사용할 수 없습니다.
 
-   <img src="lab-images/network_mgmt--2.3_NAD_Created.png" title="100px" alt="생성된 Network Attachment Definition 확인"></img> <br>
+   <img src="new_images/76_network_details.png" title="100px" alt="생성된 Network Attachment Definition 확인"></img> <br>
 <br>
 <br>
 

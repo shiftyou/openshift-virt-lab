@@ -129,7 +129,7 @@
 
 15. **스크립트(Scripts)** 탭으로 이동합니다. 이 탭은 배포 시 cloud-init 또는 Sysprep과 같은 게스트 운영체제 사용자 지정을 적용하는 데 사용됩니다.
 
-    <img src="lab-images/virt_cust--2.14_Wizard_Scripts.png" title="100px" alt="가상머신 사용자 정의 스크립트"></img> <br>
+    <img src="new_images/58_fedora_scripts.png" title="100px" alt="가상머신 사용자 정의 스크립트"></img> <br>
 
     * **Cloud-init**는 GUI 대화 상자를 사용하거나 고급 구성을 위해 표준 YAML 스크립트를 사용하여 구성할 수 있습니다. 다음 단계에서는 이 정보를 설정 하겠습니다.
     * 선택적으로 한 명 이상의 사용자가 암호 없이 가상머신에 연결할 수 있도록 **Authorized SSH key**가 제공될 수 있습니다. 이 SSH 키는 `시크릿(Secret)`로 저장될 수 있으며 원하는 경우 새 리눅스 가상머신에 자동으로 적용될 수 있습니다.
@@ -138,16 +138,16 @@
 
 16. Fedora 가상머신을 위해 **Cloud-init** 섹션에서 **Edit**을 누릅니다.
 
-    <img src="lab-images/virt_cust--2.15.1_cloud-init.png" title="100px" alt="가상머신 사용자 정의 스크립트 - cloud-init"></img> <br>
+    <img src="new_images/58_fedora_scripts.png" title="100px" alt="가상머신 사용자 정의 스크립트 - cloud-init"></img> <br>
     
     `fedora` 사용자의 비밀번호 `ocpVirtIsGre@t`를 지정합니다. 완료되면 **Apply**를 클릭하세요.
-    <img src="lab-images/virt_cust--2.15.2_Wizard_Scripts_Password.png" title="100px" alt="가상머신 사용자 정의 스크립트 암호 설정"></img> <br>
+    <img src="new_images/59_fedora_cloud_init_password.png" title="100px" alt="가상머신 사용자 정의 스크립트 암호 설정"></img> <br>
     여기서 해당 상자를 선택하여 네트워크 구성 정보를 지정할 수도 있습니다. 예를 들어 가상머신을 VLAN 네트워크에 직접 연결하고 고정 IP 주소를 구성하려는 경우에 유용합니다.
 <br>
 
 17. **Create VirtualMachine**을 눌러 생성 후 **Start this VirtualMachine after creation** 옵션이 선택되어 있는지 확인합니다.
 
-    <img src="lab-images/virt_cust--2.16_Wizard_Review.png" title="100px" alt="가상머신 사용자 정의 생성 및 리뷰"></img> <br>
+    <img src="new_images/60_create_vm.png" title="100px" alt="가상머신 사용자 정의 생성 및 리뷰"></img> <br>
 
 > [!NOTE]
 > *Start this VirtualMachine after creation* 상자를 선택하는 것을 잊은 경우 가상머신이 생성되고 `Stopped` 상태라면 패널 오른쪽 상단에 있는 작업 드롭다운을 클릭하고 **Start** 을 선택합니다.
@@ -155,14 +155,14 @@
 
 17. 가상머신이 실행되면 **Overview**를 확인합니다.
 
-    <img src="lab-images/virt_cust--2.17_fedora2_overview.png" title="100px" alt="가상머신 fedora02 개요"></img> <br>
+    <img src="new_images/61_fedora02_overview.png" title="100px" alt="가상머신 fedora02 개요"></img> <br>
     * **Name**이 `fedora02`인 것을 확인
     * **CPU|Memory**가 `2CPU|4Gib Memory`인 것을 확인
 <br>
 
 18. **Console** 탭을 사용하여 자유롭게 연결하세요. 사용자는 `fedora`이고 비밀번호는 이전에 지정한 비밀번호입니다(예: `ocpVirtIsGre@t`).
 
-    <img src="lab-images/virt_cust--2.18_fedora2_console.png" title="100px" alt="가상머신 fedora02 콘솔"></img> <br>
+    <img src="new_images/62_fedora_console_login.png" title="100px" alt="가상머신 fedora02 콘솔"></img> <br>
 <br>
 <br>
 

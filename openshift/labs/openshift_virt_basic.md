@@ -92,17 +92,17 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
 
 6. **Fedora VM** 템플릿 대화 상자를 확인합니다.
 
-   <img src="new_images/11_change_fedora_name.png" title="100px" alt="페도라 가상머신 템플릿"></img> <br> 
+   <img src="new_images/10_fedora_vm_templates.png" title="100px" alt="페도라 가상머신 템플릿"></img> <br> 
 <br>
 
 7. 이름을 `fedora01`로 변경하고 **Quick create VirtualMachine**을 누릅니다.
 
-   <img src="lab-images/virt_basic--2.1.7_Create_VM_Quick_Name.png" title="100px" alt="가상머신 이름 지정"></img> <br> 
+   <img src="new_images/11_change_fedora_name.png" title="100px" alt="가상머신 이름 지정"></img> <br> 
 <br>
 
 8. 몇 초 후에 가상머신의 Status가 `Running`으로 바뀔 것 입니다. 이 시간 동안 스토리지 공급자는 새로 생성된 가상머신에서 사용할 수 있도록 템플릿 디스크를 복제했습니다. 소요되는 시간은 스토리지 제공업체에 따라 다릅니다.
 
-   <img src="lab-images/virt_basic--2.1.8_Fedora_Running.png" title="100px" alt="페도라 가상머신 실행"></img> <br> 
+   <img src="new_images/12_fedora_running.png" title="100px" alt="페도라 가상머신 실행"></img> <br> 
 <br>
 
 9. 가상머신이 생성된 후 **Events** 탭을 검사하여 프로세스의 일부 세부 정보를 확인합니다. 가상머신 생성에 문제가 있는 경우에 이 탭에 표시됩니다.

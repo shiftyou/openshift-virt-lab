@@ -166,7 +166,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
     <img src="new_images/125_vm_mig_running.png" title="100px" alt="VMware 마이그레이션 계획 진행2"></img> <br>
 
     시간이 지나면 마이그레이션이 완료됩니다.
-    <img src="lab-images/vm_migration--3.4.11.3_Completed_VMWARE_Plan.png" title="100px" alt="VMware 마이그레이션 계획 완료"></img> <br>
+    <img src="new_images/126_vm_mig_complete.png" title="100px" alt="VMware 마이그레이션 계획 완료"></img> <br>
 
 > [!IMPORTANT]
 > 많은 참가자가 동일한 작업을 병렬로 수행하면 이 작업이 실제 환경보다 느리게 수행될 수 있습니다. 기다려주십시오.

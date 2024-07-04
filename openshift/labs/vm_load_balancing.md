@@ -74,11 +74,15 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 
 2. **세부 정보** 탭에서 *제공된 API* 섹션을 검토합니다.
 
+   <img src="new_images/148_metalb_details.png" title="100px" alt="가상머신 로드밸런싱 MetalLB API"></img> <br>
+   * *상태* 값이 `Conditions; Available, Upgradable`인 것을 확인합니다.
+<br>
+
 <br>
 
 3. **MetalLB** 탭을 선택하여 배포가 올바르게 설치 및 구성되었는지 확인합니다.
 
-   <img src="new_images/148_metalb_details.png" title="100px" alt="가상머신 로드밸런싱 MetalLB 리뷰"></img> <br>
+   <img src="new_images/149_metallb_status.png" title="100px" alt="가상머신 로드밸런싱 MetalLB 리뷰"></img> <br>
    * *상태* 값이 `Conditions; Available, Upgradable`인 것을 확인합니다.
 <br>
 

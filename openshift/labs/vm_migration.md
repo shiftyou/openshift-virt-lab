@@ -194,7 +194,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 1. 오픈시프트 콘솔에서 **Virtualization** → **VirtualMachines**로 이동하여 마이그레이션된 가상머신을 성공적으로 가져오고 실행 중인지 확인합니다.
 
-   <img src="lab-images/vm_migration--3.5.1_VMWARE_VMs_List.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 리스트 확인"></img> <br>
+   <img src="new_images/127_migration_vm_lists.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 리스트 확인"></img> <br>
 
 > [!NOTE]
 > `vmexamples` 프로젝트를 선택했는지 확인하세요.
@@ -202,7 +202,7 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 2. `winweb01`에 액세스하고 **YAML** 탭으로 이동합니다.
 
-   <img src="lab-images/vm_migration--3.5.2_select_vm.png" title="100px" alt="winweb01 가상머신 선택"></img> <br>
+   <img src="new_images/128_web01_vm_yaml.png" title="100px" alt="winweb01 가상머신 선택"></img> <br>
 <br>
 
 3. `spec:` 섹션을 찾고 `template.metadata` 아래에 다음 줄을 추가하여 가상머신 리소스에 레이블을 지정합니다.
@@ -212,11 +212,11 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
            env: webapp
    ```
 
-   <img src="lab-images/vm_migration--3.5.3.1_VMWARE_VMs_YAML.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 확인"></img> <br>
+   <img src="new_images/129_vm_web01_labels.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 확인"></img> <br>
    입력을 완료한 후 **저장**을 누릅니다.
    <br>
 
-   <img src="lab-images/vm_migration--3.5.3.2_updated_VMWARE_VMs_YAML.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 변경된 것을 확인"></img> <br>
+   <img src="new_images/130_vm01_labels_update.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 변경된 것을 확인"></img> <br>
    변경된 것을 확인합니다.
 
 > [!IMPORTANT]
@@ -225,23 +225,23 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 4. 가상머신 `winweb02`에 대해 프로세스를 반복합니다.
 
-   <img src="lab-images/vm_migration--3.5.4_updated_VMWARE_VMs_YAML_of_winweb02.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 변경된 것을 확인"></img> <br>
+   <img src="new_images/131_vm02_labels_update.png" title="100px" alt="VMware로부터 마이그레이션 된 가상머신 YAML 파일 변경된 것을 확인"></img> <br>
 <br>
 
 5. *가상 머신(Virtual Machines)* `database`, `winweb01` 및 `winweb02`를 시작합니다.
 
-   <img src="lab-images/vm_migration--3.5.5.1_start_database_winweb.png" title="100px" alt="마이그레이션 된 가상머신을 시작"></img> <br>
+   <img src="new_images/132_vm_start.png" title="100px" alt="마이그레이션 된 가상머신을 시작"></img> <br>
 
    각 가상머신의 콘솔 탭에 액세스하여 가상머신이 제대로 작동하는지 확인하세요.
-   <img src="lab-images/vm_migration--3.5.5.2_check_if_vm_is_running.png" title="100px" alt="가상머신이 실행 중인 것을 확인"></img> <br>
+   <img src="new_images/133_vm_running.png" title="100px" alt="가상머신이 실행 중인 것을 확인"></img> <br>
 <br>
 
 6. **네트워킹** → **서비스** 로 이동하고 **서비스 만들기**를 누릅니다.
 
-   <img src="lab-images/vm_migration--3.5.6.1_create_network_service.png" title="100px" alt="서비스 생성"></img> <br>
+   <img src="new_images/134_vm_svc.png" title="100px" alt="서비스 생성"></img> <br>
 
    가상머신에 추가한 레이블(`env=webapp`)을 기억하시나요? 여기서는 서비스가 선택기(selector)에서 해당 레이블을 사용하여 트래픽을 라우팅할 가상머신을 선택하는 것을 볼 수 있습니다.
-   <img src="lab-images/vm_migration--3.5.6.2_check_network_service_yaml.png" title="100px" alt="서비스 YAML 확인"></img> <br>
+   <img src="new_images/135_vm_svc2.png" title="100px" alt="서비스 YAML 확인"></img> <br>
 <br>
 
 7. YAML을 다음 정의로 바꿉니다.
@@ -260,13 +260,13 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
          port: 80
          targetPort: 80
    ```
-   <img src="lab-images/vm_migration--3.5.7_update_network_service_yaml.png" title="100px" alt="변경된 서비스 YAML 확인"></img> <br>
+   <img src="new_images/136_vm_svc3.png" title="100px" alt="변경된 서비스 YAML 확인"></img> <br>
    * metadata.namespace의 값이 `vmexamples`인 것을 확인합니다.
 <br>
 
 8. **만들기**를 누르고 생성된 서비스를 확인합니다.
 
-   <img src="lab-images/vm_migration--3.5.8.1_check_created_network_service.png" title="100px" alt="생성된 서비스 확인"></img> <br>
+   <img src="new_images/137_vm_svc4.png" title="100px" alt="생성된 서비스 확인"></img> <br>
    
    **Pod 선택기**가 `env=webapp`인 것을 확인하고 이를 누릅니다.
    <img src="lab-images/vm_migration--3.5.8.2_check_two_winwebs_are_identified.png" title="100px" alt="생성된 서비스 확인"></img> <br>

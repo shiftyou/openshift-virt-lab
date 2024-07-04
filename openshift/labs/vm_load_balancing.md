@@ -69,12 +69,11 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 1. **Operators** → **설치된 Operators**로 이동합니다. 
 
    **모든 프로젝트**를 선택하고 **MetalLB**를 선택합니다.
-   <img src="lab-images/vm_lb--3.1.1_Operator_Installed.png" title="100px" alt="가상머신 로드밸런싱 오퍼레이터 설치"></img> <br>
+   <img src=new_images/148_metalb_details.png" title="100px" alt="가상머신 로드밸런싱 오퍼레이터 설치"></img> <br>
 <br>
 
 2. **세부 정보** 탭에서 *제공된 API* 섹션을 검토합니다.
 
-   <img src="new_images/148_metalb_details.png" title="100px" alt="가상머신 로드밸런싱 오퍼레이터 리뷰"></img> <br>
 <br>
 
 3. **MetalLB** 탭을 선택하여 배포가 올바르게 설치 및 구성되었는지 확인합니다.

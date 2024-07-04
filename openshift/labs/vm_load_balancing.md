@@ -58,7 +58,7 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 
 노드를 사용할 수 없게 되면 라우터는 로드 밸런서 IP 주소를 광고하는 스피커 포드가 있는 다른 노드와의 새 연결을 시작합니다.
 
-<img src="lab-images/vm_lb--0.2_bgp.png" title="100px" alt="가상머신 로드밸런싱 BGP 모드"></img> <br> 
+<img src="new_images/147_metallb_operator.png" title="100px" alt="가상머신 로드밸런싱 BGP 모드"></img> <br> 
 <br>
 <br>
 
@@ -74,12 +74,12 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 
 2. **세부 정보** 탭에서 *제공된 API* 섹션을 검토합니다.
 
-   <img src="lab-images/vm_lb--3.1.2_Review_Operator.png" title="100px" alt="가상머신 로드밸런싱 오퍼레이터 리뷰"></img> <br>
+   <img src="new_images/148_metalb_details.png" title="100px" alt="가상머신 로드밸런싱 오퍼레이터 리뷰"></img> <br>
 <br>
 
 3. **MetalLB** 탭을 선택하여 배포가 올바르게 설치 및 구성되었는지 확인합니다.
 
-   <img src="lab-images/vm_lb--3.1.3_Review_Operator_MetalLB.png" title="100px" alt="가상머신 로드밸런싱 MetalLB 리뷰"></img> <br>
+   <img src="new_images/149_metallb_status.png" title="100px" alt="가상머신 로드밸런싱 MetalLB 리뷰"></img> <br>
    * *상태* 값이 `Conditions; Available, Upgradable`인 것을 확인합니다.
 <br>
 
@@ -89,7 +89,7 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 
 1. 프로젝트 `metallb-system`으로 전환하고 **IPAddressPool** 탭을 선택합니다.
 
-   <img src="lab-images/vm_lb--3.2.1_select_IPAddressPool_tab.png" title="100px" alt="IPAddressPool 탭을 선택"></img> <br> 
+   <img src="new_images/150_metallb_ipaddresspool.png" title="100px" alt="IPAddressPool 탭을 선택"></img> <br> 
 <br>
 
 2. **IPAddressPool 만들기**를 누르고 `Form view`를 확인합니다.

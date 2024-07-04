@@ -97,7 +97,7 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 
 2. **IPAddressPool 만들기**를 누르고 `Form view`를 확인합니다.
 
-   <img src="lab-images/vm_lb--3.2.2_MetalLB_IPAddressPool_Form.png" title="100px" alt="MetalLB IPAddressPool 폼"></img> <br> 
+   <img src="new_images/151_metallb_ipaddresspool_edit.png" title="100px" alt="MetalLB IPAddressPool 폼"></img> <br> 
 <br>
 
 3. 폼에 다음과 같이 값을 입력합니다.
@@ -108,12 +108,12 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
      + *값*에 `192.168.123.200-192.168.123.250`을 입력하여 주소 풀로 구성
      
    완료되면 다음 이미지와 유사하게 보일 것입니다.
-   <img src="lab-images/vm_lb--3.2.3_MetalLB_IPAddressPool_Defined.png" title="100px" alt="MetalLB IPAddressPool 정의"></img> <br> 
+   <img src="new_images/152_metallb_addresspool_edit2.png" title="100px" alt="MetalLB IPAddressPool 정의"></img> <br> 
 <br>
 
 4. 아래로 스크롤하여 **만들기**를 누르고 생성된 풀을 확인합니다.
 
-   <img src="lab-images/vm_lb--3.2.4_check_created_ipaddresspool.png" title="100px" alt="생성된 MetalLB IPAddressPool 확인"></img> <br> 
+   <img src="new_images/153_metallb_ipaddresspool2.png" title="100px" alt="생성된 MetalLB IPAddressPool 확인"></img> <br> 
 <br>
 
 ### 3.3 레이어 2 모드 구성
@@ -121,7 +121,7 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
 이를 위해 실습에서는 Layer2 모드에서 MetalLB를 사용하겠습니다.
 
 1. **L2Advertisement** 탭으로 전환하고 **Create L2Advertisement**을 누릅니다.
-   <img src="lab-images/vm_lb--3.3.1_select_MetalLB_L2Advertisement_tab.png" title="100px" alt="MetalLB L2Advertisemen 생성"></img> <br>
+   <img src="new_images/154_metallab_layer2.png" title="100px" alt="MetalLB L2Advertisemen 생성"></img> <br>
 <br>
 
 2. 폼에 다음과 같이 값을 입력합니다.
@@ -131,12 +131,12 @@ BGP 모드에서는 기본적으로 각 스피커(speaker) 포드가 서비스�
      + *값*에 다음과 같이 `ip-addresspool-webapp` 값을 지정
 
    완료되면 다음 이미지와 유사하게 보일 것입니다.
-   <img src="lab-images/vm_lb--3.3.2_MetalLB_L2Advertisement.png" title="100px" alt="MetalLB L2Advertisement 값을 지정"></img> <br>
+   <img src="new_images/155_metallb_layer2_edit.png" title="100px" alt="MetalLB L2Advertisement 값을 지정"></img> <br>
 <br>
 
 3. **만들기**를 누르고 생성된 값을 확인합니다.
 
-   <img src="lab-images/vm_lb--3.3.3_check_created_MetalLB_L2Advertisement.png" title="100px" alt="MetalLB L2Advertisement 값을 지정"></img> <br>
+   <img src="new_images/156_metallb_layer2_2.png" title="100px" alt="MetalLB L2Advertisement 값을 지정"></img> <br>
 <br>
 <br>
 
@@ -146,7 +146,7 @@ VMWare에서 마이그레이션된 가상머신은 현재 이전 모듈에서 �
 
 1. **네트워킹** → **서비스**로 이동하여 `vmexamples` 프로젝트를 선택합니다.
 
-   <img src="lab-images/vm_lb--4.1_Services.png" title="100px" alt="가상머신 로드밸런싱 서비스"></img> <br>
+   <img src="new_images/157_metallb_svc.png" title="100px" alt="가상머신 로드밸런싱 서비스"></img> <br>
 <br>
 
 2. **서비스 만들기**를 누르고 다음 코드 조각으로 양식을 작성합니다.
@@ -167,7 +167,7 @@ VMWare에서 마이그레이션된 가상머신은 현재 이전 모듈에서 �
          targetPort: 3306   
    ```
 
-   <img src="lab-images/vm_lb--4.2_input_yaml_for_services.png" title="100px" alt="가상머신 로드밸런싱 서비스"></img> <br>
+   <img src="new_images/158_metallb_db_svc.png" title="100px" alt="가상머신 로드밸런싱 서비스"></img> <br>
 
 > [!NOTE]
 > 표시된 `type`은 `LoadBalancer`입니다. 이 클러스터에는 MetalLB가 설치되어 있으므로 이를 사용하여 지정된 포트가 노출됩니다. F5, Nginx 등과 같은 파트너가 제공하는 다른 로드밸런서 옵션이 있습니다.
@@ -175,7 +175,7 @@ VMWare에서 마이그레이션된 가상머신은 현재 이전 모듈에서 �
 
 3. **만들기**를 누르고 생성된 서비스 `database-metallb`를 검토합니다. 로드밸런서에 할당된 IP 주소는 이전 실습에서 지정한 범위에 속합니다.
 
-   <img src="lab-images/vm_lb--4.3_Service_created.png" title="100px" alt="가상머신 로드밸런싱 생성된 서비스"></img> <br>
+   <img src="new_images/159_metallb_db_svc_2.png" title="100px" alt="가상머신 로드밸런싱 생성된 서비스"></img> <br>
 <br>
 
 4. 외부 IP를 통해 데이터베이스 서비스에 대한 연결을 확인하려면 오른쪽 상단의 다음 아이콘을 클릭하여 웹 터미널을 엽니다.

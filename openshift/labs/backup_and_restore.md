@@ -34,23 +34,23 @@
 1. 왼쪽 메뉴에서 **Operators** → **설치된 Operator**로 이동하여 `모든 프로젝트(All projects)`가 선택되었는지 확인합니다. 
 
    `OADP Operator(오퍼레이터)`를 선택합니다.
-   <img src="lab-images/backup_restore--2.1_Left_Menu.png" title="100px" alt="OADP 오퍼레이터 확인"></img> <br> 
+   <img src="new_images/163_oadp_operator.png" title="100px" alt="OADP 오퍼레이터 확인"></img> <br> 
 <br>
 
 2. 사용 가능한 **제공되는 API**를 검토합니다.
 
    이 모듈에서는 `백업(Backup)` 및 `복원(Restore)` 기능을 사용합니다.
-   <img src="lab-images/backup_restore--2.2_Overview.png" title="100px" alt="백업 & 복구 API 확인"></img> <br> 
+   <img src="new_images/164_odap_details.png" title="100px" alt="백업 & 복구 API 확인"></img> <br> 
 <br>
 
 3. **DataProtectionApplication** 탭으로 이동합니다. 이 객체는 배포된 OADP 인스턴스의 구성을 나타냅니다.
 
-   <img src="lab-images/backup_restore--2.3_DPA.png" title="100px" alt="DataProtectionApplication 인스턴스 확인"></img> <br> 
+   <img src="new_images/165_oadp_dpa.png" title="100px" alt="DataProtectionApplication 인스턴스 확인"></img> <br> 
 <br>
 
 4. `oadp-dpa`를 선택하고 **YAML** 탭을 선택하여 내용을 검토합니다.
 
-   <img src="lab-images/backup_restore--2.4_OADP_YAML.png" title="100px" alt="OAPD의 YAML 파일 정의 리뷰"></img> <br> 
+   <img src="new_images/166_oadp_dpa_yaml.png" title="100px" alt="OAPD의 YAML 파일 정의 리뷰"></img> <br> 
 
    `kubevirt` 플러그인을 추가하여 **OADP**가 구성되었으며 **레드햇 스토리지**에서 제공하는 내부 오브젝트 스토리지 버킷을 사용하도록 구성되었습니다.
 
@@ -66,17 +66,17 @@
 
 1. 오퍼레이터 이름을 클릭하여 한 화면으로 돌아가 기본 오퍼레이터 페이지로 이동합니다.
 
-   <img src="lab-images/backup_restore--3.1_select_instance.png" title="100px" alt="인스턴스 선택"></img> <br>
+   <img src="new_images/167_installed_operator.png" title="100px" alt="인스턴스 선택"></img> <br>
 <br>
 
 2. **Backup** 탭으로 이동하여 **Backup 만들기**를 누릅니다.
 
-   <img src="lab-images/backup_restore--3.2_Backup_Tab.png" title="100px" alt="백업 탭"></img> <br> 
+   <img src="new_images/168_oadp_backup.png" title="100px" alt="백업 탭"></img> <br> 
 <br>
 
 3. **Backup 만들기** 폼을 확인하고 *YAML 보기*로 전환 합니다.
 
-   <img src="lab-images/backup_restore--3.3.1_backup_form.png" title="100px" alt="백업 만들기 폼"></img> <br> 
+   <img src="new_images/169_oadp_yaml_view.png" title="100px" alt="백업 만들기 폼"></img> <br> 
    
 
    콘텐츠를 다음 항목으로 바꿉니다.
@@ -103,7 +103,7 @@
 
    이 YAML의 콘텐츠는 `vmexamples` 네임스페이스에 `app: fedora02` 레이블이 있는 모든 객체가 `DataProtectionApplication` 구성에 지정된 위치에 백업된다는 것을 나타냅니다.
 
-   <img src="lab-images/backup_restore--3.3.2_backup_yaml.png" title="100px" alt="백업 만들기 yaml"></img> <br> 
+   <img src="new_images/170_oadp_yaml_update.png" title="100px" alt="백업 만들기 yaml"></img> <br> 
 
    **만들기**를 누릅니다.
 <br>
@@ -111,10 +111,10 @@
 4. `상태` 열을 통해 진행 사항을 확인합니다.
 
    `Phase: InProgress`로 백업 진행 중입니다.
-   <img src="lab-images/backup_restore--3.4.1_Backup_InProgress.png" title="100px" alt="백업 진행"></img> <br> 
+   <img src="new_images/171_oadp_backup_status.png" title="100px" alt="백업 진행"></img> <br> 
 
    `Phase: Completed`으로 바뀔 때까지 기다립니다. 이는 가상머신이 성공적으로 백업되었음을 나타냅니다.
-   <img src="lab-images/backup_restore--3.4.2_Backup_Completed.png" title="100px" alt="백업 탭 상태 확인"></img> <br> 
+   <img src="new_images/172_fedora02_vm_delete.png" title="100px" alt="백업 탭 상태 확인"></img> <br> 
 <br>
 <br>
 
@@ -122,17 +122,17 @@
 
 1. **Virtualization** → **VirtualMachines**로 이동하여 `fedora02` 가상머신을 삭제합니다.
 
-   <img src="lab-images/backup_restore--4.1_delete_fedora02_vm.png" title="100px" alt="fedora02 가상머신 삭제"></img> <br>
+   <img src="new_images/172_oadp_backup_complete.png" title="100px" alt="fedora02 가상머신 삭제"></img> <br>
 <br>
 
 2. **Operators** → **설치된 Operator**로 돌아가서 **OADP Operator**를 선택합니다.
 
-   <img src="lab-images/backup_restore--4.2_select_oadp_operator.png" title="100px" alt="OADP 오퍼레이터 선택"></img> <br> 
+   <img src="new_images/173_fedora02_restore.png" title="100px" alt="OADP 오퍼레이터 선택"></img> <br> 
 <br>
 
 3. **Restore** 탭으로 전환하고 **Restore 만들기**를 누릅니다.
 
-   <img src="lab-images/backup_restore--4.3_Restore_Tab.png" title="100px" alt="복구 탭 상태"></img> <br> 
+   <img src="new_images/173_return_oadp.png" title="100px" alt="복구 탭 상태"></img> <br> 
 <br>
 
 4. YAML 보기로 전환하고 콘텐츠를 다음 항목으로 바꿉니다.
@@ -155,22 +155,22 @@
      restorePVs: true
    ```
 
-   <img src="lab-images/backup_restore--4.4_Restore_YAML.png" title="100px" alt="복구 YAML 변경"></img> <br>
+   <img src="new_images/174_odap_restore.png" title="100px" alt="복구 YAML 변경"></img> <br>
    변경된 YAML을 확인하고 **만들기**를 누릅니다. 
 <br>
 
 5. `상태` 열을 통해 진행을 확인합니다.
 
    `Phase: InProgress`는 현재 진행 중인 것을 나타냅니다.
-   <img src="lab-images/backup_restore--4.5.1_Restore_InProgress.png" title="100px" alt="복구 진행 중"></img> <br> 
+   <img src="new_images/174_odap_restore_yaml_update.png" title="100px" alt="복구 진행 중"></img> <br> 
    
    `Phase: Completed`으로 바뀔 때까지 기다립니다.
-   <img src="lab-images/backup_restore--4.5.2_Restore_Completed.png" title="100px" alt="복구 완료 확인"></img> <br> 
+   <img src="new_images/175_oadp_restore_status.png" title="100px" alt="복구 완료 확인"></img> <br> 
 <br>
 
 6. **Virtualization** → **Virtual Machines**으로 다시 이동하여 `fedora02`가 복원되었는지 확인합니다.
 
-   <img src="lab-images/backup_restore--4.6_VM_Restored.png" title="100px" alt="복구된 가상머신 확인"></img> <br> 
+   <img src="new_images/176_oadp_restore_complete.png" title="100px" alt="복구된 가상머신 확인"></img> <br> 
 <br>
 <br>
 

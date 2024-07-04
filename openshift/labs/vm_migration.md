@@ -269,23 +269,23 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
    <img src="new_images/137_vm_svc4.png" title="100px" alt="생성된 서비스 확인"></img> <br>
    
    **Pod 선택기**가 `env=webapp`인 것을 확인하고 이를 누릅니다.
-   <img src="lab-images/vm_migration--3.5.8.2_check_two_winwebs_are_identified.png" title="100px" alt="생성된 서비스 확인"></img> <br>
+   <img src="new_images/138_vm_pod_selector.png" title="100px" alt="생성된 서비스 확인"></img> <br>
    * 해당 서비스에 두 개의 winweb01/02 가상머신이 있는 것을 확인합니다.
 
    webweb01 관련 포드를 누릅니다.
-   <img src="lab-images/vm_migration--3.5.8.3_check_one_pod_virt-launcher-winweb01.png" title="100px" alt="생성된 서비스 확인"></img> <br>
+   <img src="new_images/139_vm_web01.png" title="100px" alt="생성된 서비스 확인"></img> <br>
    * **라벨**에 `env=winapp`가 있는 것을 확인합니다.
 <br>
 
 9. 이제 오픈시프트 클러스터 내에서 윈도우 IIS에 액세스할 수 있습니다. 다른 가상머신은 DNS 이름 `webapp.vmexamples`를 사용하여 여기에 액세스할 수 있습니다. 그러나 이러한 웹 서버는 외부에서 액세스 가능한 애플리케이션의 프런트 엔드이므로 **경로**를 사용하여 노출할 것입니다.
 
    왼쪽 탐색 메뉴에서 **네트워킹** → **경로**로 이동한 후 **경로 만들기**를 누릅니다.
-   <img src="lab-images/vm_migration--3.5.9_create_route_for_winweb.png" title="100px" alt="경로 만들기"></img> <br>
+   <img src="new_images/140_vm_route.png" title="100px" alt="경로 만들기"></img> <br>
 <br>
 
 10. 다음 정보를 입력하세요.
 
-    <img src="lab-images/vm_migration--3.5.10_VMWARE_VMs_Create_Route.png" title="100px" alt="마이그레이션 된 가상머신 경로 생성"></img> 
+    <img src="new_images/140_vm_route2.png" title="100px" alt="마이그레이션 된 가상머신 경로 생성"></img> 
     * **이름**: `route-webapp`
     * **서비스**: `webapp`
     * **대상 포트**: `80 → 80 (TCP)`
@@ -299,10 +299,10 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 11. 생성된 경로를 확인합니다.
 
-    <img src="lab-images/vm_migration--3.5.11.1_check_created_route.png" title="100px" alt="생성된 가상머신의 경로 확인"></img> <br>
+    <img src="new_images/141_vm_route3.png" title="100px" alt="생성된 가상머신의 경로 확인"></img> <br>
 
     **위치** 필드에 표시된 주소로 이동합니다.
-    <img src="lab-images/vm_migration--3.5.11.2_check_location.png" title="100px" alt="가상머신의 경로 URL 확인"></img> <br>
+    <img src="new_images/142_server_error.png" title="100px" alt="가상머신의 경로 URL 확인"></img> <br>
 <br>
 
 12. 페이지가 로드되면 오류가 표시됩니다. 이는 윈도우 웹 서버가 데이터베이스 가상머신에 연결하기 위해 내부 이름 `database`를 확인할 수 없기 때문입니다.
@@ -325,12 +325,12 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
           port: 3306
           targetPort: 3306    
     ```
-    <img src="lab-images/vm_migration--3.5.12.1_create_service_for_database.png" title="100px" alt="데이터베이스 용 서비스 생성"></img> <br>
+    <img src="new_images/143_database_svc.png" title="100px" alt="데이터베이스 용 서비스 생성"></img> <br>
     YAML을 변경 완료 후 **만들기**를 누릅니다.
     <br>
 
     생성된 서비스를 확인합니다.
-    <img src="lab-images/vm_migration--3.5.12.2_check_created_service_for_database.png" title="100px" alt="생성된 데이터베이스 용 서비스 확인"></img> <br>
+    <img src="new_images/144_database_svc2.png" title="100px" alt="생성된 데이터베이스 용 서비스 확인"></img> <br>
 
 > [!NOTE]
 > 이 예에서 서비스는 단순히 가상머신 이름 selector를 사용하고 있습니다. 모든 가상머신에 자동으로 추가되는 기본 레이블입니다. selector와 일치하는 가상머신이 하나만 있기 때문에 서비스는 데이터베이스에 대한 부하를 분산하지 않고 대신 내부 DNS 이름을 통한 검색을 위해 서비스를 사용합니다.
@@ -338,10 +338,10 @@ MTV(Migration Toolkit for Virtualization)는 VMware Virtual Disk Development Kit
 
 13. webapp URL을 다시 로드하면 적절한 결과를 얻을 수 있습니다.
 
-    <img src="lab-images/vm_migration--3.5.13.1_VMWARE_VMs_URL.png" height="80%" width="80%" title="100px" alt="webapp의 URL을 리로드하여 결과 확인"></img> <br>
+    <img src="new_images/145_request.png" height="80%" width="80%" title="100px" alt="webapp의 URL을 리로드하여 결과 확인"></img> <br>
 
     다시 로드하면 `visitor number`가 늘어 납니다.
-    <img src="lab-images/vm_migration--3.5.13.2_VMWARE_VMs_URL.png" height="80%" width="80%" title="100px" alt="webapp의 URL을 리로드하여 결과 확인"></img> <br>
+    <img src="new_images/146_request2.png" height="80%" width="80%" title="100px" alt="webapp의 URL을 리로드하여 결과 확인"></img> <br>
 
 > [!NOTE]
 > 웹 서비스가 실행되는 데 시간일 걸릴 수 있습니다. 시간이 지나면 정상적으로 표시가 됩니다.

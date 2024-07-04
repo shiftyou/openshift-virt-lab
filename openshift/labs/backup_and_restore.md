@@ -165,7 +165,7 @@
    <img src="new_images/174_odap_restore_yaml_update.png" title="100px" alt="복구 진행 중"></img> <br> 
    
    `Phase: Completed`으로 바뀔 때까지 기다립니다.
-   <img src="new_images/175_oadp_restore_status.png" title="100px" alt="복구 완료 확인"></img> <br> 
+   <img src="new_images/175_oadp_restore_status_2.png" title="100px" alt="복구 완료 확인"></img> <br> 
 <br>
 
 6. **Virtualization** → **Virtual Machines**으로 다시 이동하여 `fedora02`가 복원되었는지 확인합니다.

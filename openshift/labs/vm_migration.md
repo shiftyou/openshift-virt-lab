@@ -64,7 +64,7 @@
    **VSPHERE CLIENT 시작**을 누릅니다.<br>
    <img src="lab-images/vm_migration--3.1.1.1_vSphere_client.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
 
-   사용자 `vcenter_user` 및 비밀번호 `%vcenter_password%`로 로그인합니다.
+   사용자 `%vcenter_user%` 및 비밀번호 `%vcenter_password%`로 로그인합니다.
    <img src="new_images/107_vcenter_accounts.png" height="50%" width="50%" title="100px" alt="vSphere 클라이언트 포탈"></img> <br> 
 <br>
 

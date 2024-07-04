@@ -180,26 +180,29 @@ VMWare에서 마이그레이션된 가상머신은 현재 이전 모듈에서 �
 
 4. 외부 IP를 통해 데이터베이스 서비스에 대한 연결을 확인하려면 오른쪽 상단의 다음 아이콘을 클릭하여 웹 터미널을 엽니다.
 
-   <img src="lab-images/vm_lb--4.4_OCP_Terminal_Icon.png" title="100px" alt="가상머신 콘솔 아이콘"></img> <br>
+   <img src="new_images/160_web_terminal.png" title="100px" alt="가상머신 콘솔 아이콘"></img> <br>
 <br>
 
 5. 화면 하단에 콘솔이 나타납니다
 
-   <img src="lab-images/vm_lb--4.5_OCP_Terminal.png" height="75%" width="75%" title="100px" alt="가상머신 콘솔 연결"></img> <br>
+   <img src="new_images/161_web_terminal_console.png" height="75%" width="75%" title="100px" alt="가상머신 콘솔 연결"></img> <br>
 <br>
 
 6. 오른쪽 콘솔을 사용하여 할당된 IP와 포트 3306에 액세스해 봅니다.
 
    ```bash
-   [~] $ curl -s 192.168.123.202:3306 | cut -c1-16
+   [~] $ curl -v telnet://192.168.123.202:3306
    ```
 
    출력 예
    ```bash
-   5.5.68-MariaDB
+   * Rebuilt URL to: telnet://192.168.123.202:3306/
+   *   Trying 192.168.123.202...
+   * TCP_NODELAY set
+   * Connected to 192.168.123.202 (192.168.123.202) port 3306 (#0)
    ```
 
-   <img src="lab-images/vm_lb--4.6_result_of_OCP_Terminal.png" title="100px" alt="데이터베이스 서비스 확인"></img> <br>
+   <img src="new_images/162_web_terminal_curl.png" title="100px" alt="데이터베이스 서비스 확인"></img> <br>
 <br>
 <br>
 

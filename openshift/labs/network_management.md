@@ -119,7 +119,33 @@ VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본�
    <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 Console 확인"></img> <br>
 <br>
 
-7. (선택 사항) 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다. <br>
+7. (선택 사항) fedora 계정/패스워드로 접속허용을 위해 sshd 설정을 변경합니다.
+   **Console** 탭으로 이동하여 터미널에 접속한 후, sudo로 계정을 스위치 합니다.
+   
+   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 Console 접속"></img> <br>
+<br>
+
+   **sshd** 설정 변경을 위해 설정 파일을 vi로 오픈합니다.
+   ```bash
+   vi /etc/ssh/sshd_config
+   ```
+   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 설정 파일"></img> <br>
+<br>
+
+   설정 파일에 **PasswordAuthentication yes** 을 추가합니다.
+
+   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 옵션 추가"></img> <br>
+<br>
+
+8. 설정을 저장하고, 반영을 위해 sshd 서비스를 재 시작합니다.
+   ```bash
+   systemctl restart sshd
+   ```
+   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 재 시작"></img> <br>
+<br>
+
+
+9. 배스천 호스트를 사용하여 가상머신의 외부 연결을 확인합니다. 이 워크숍 시작 시 공유된 실습 환경 자료에 제공된 대로 SSH를 통해 호스트에 연결합니다. <br>
    사전에 Hypervisor 서버에 cockpit을 설치해 두었으므로 웹 콘솔을 이용하여 이를 이용하여 베스천 호스트에 연결할 수 있습니다.
    
    1. 웹 브라우저에서 제공 받은 `hypervisor.khsqt.dynamic.redhatworkshops.io` 주소를 이용하여 `https://hypervisor.khsqt.dynamic.redhatworkshops.io:9090`으로 접속합니다. <br>
@@ -127,17 +153,19 @@ VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본�
 
       <img src="new_images/83_cockpit.png" title="100px" alt="가상머신 Cockpit 연결"></img> <br>
 
-   2. 터미널 메뉴를 선택하고, 자신의 IP를 확인한 후, `curl` 명령어를 실행합니다.
+   2. 터미널 메뉴를 선택하고, 자신의 IP를 확인한 후, 서버에 접속합니다.
 
-   3. IP를 자신의 IP로 대체하여 아래 명령을 터미널 창에 입력합니다.
+   3. IP를 자신의 IP로 대체하여 ssh 접속 명령어를 입력하고, 비밀번호(ocpVirtIsGre@t)를 입력합니다.
       
       ```bash
-      bash-4.4 ~ $ curl 192.168.3.152:22
+      ssh fedora@192.168.3.152
       ```
    
       실행 결과
       ```bash
-      SSH-2.0-OpenSSH_8.7
+      [lab-user@hypervisor ~]$ ssh fedora@192.168.3.152
+      fedora@192.168.3.152's password: 
+      Last login: Fri Jul  5 06:10:12 2024 from 192.168.3.1
       ```
       
       실행 결과는 다음과 같습니다.

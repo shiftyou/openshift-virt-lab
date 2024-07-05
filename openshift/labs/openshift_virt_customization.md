@@ -138,7 +138,7 @@
 
 16. Fedora 가상머신을 위해 **Cloud-init** 섹션에서 **Edit**을 누릅니다.
 
-    <img src="new_images/58_fedora_scripts.png" title="100px" alt="가상머신 사용자 정의 스크립트 - cloud-init"></img> <br>
+    <img src="new_images/58_fedora_scripts_2.png" title="100px" alt="가상머신 사용자 정의 스크립트 - cloud-init"></img> <br>
     
     `fedora` 사용자의 비밀번호 `ocpVirtIsGre@t`를 지정합니다. 완료되면 **Apply**를 클릭하세요.
     <img src="new_images/59_fedora_cloud_init_password.png" title="100px" alt="가상머신 사용자 정의 스크립트 암호 설정"></img> <br>

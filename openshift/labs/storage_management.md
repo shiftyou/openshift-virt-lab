@@ -85,7 +85,7 @@
    <img src="new_images/87_fedora02_pvc_details.png" title="100px" alt="PVC 상세 정보"></img> <br>
 <br>
 
-7. *영구 볼륨 클레임(Persistent Volume Claim)*은 볼륨을 프로비저닝하기 위해 특정 *스토리지 클래스(Storage class)* 또는 기본 스토리지 클래스를 신청합니다. 
+7. *영구 볼륨 클레임(Persistent Volume Claim)* 은 볼륨을 프로비저닝하기 위해 특정 *스토리지 클래스(Storage class)* 또는 기본 스토리지 클래스를 신청합니다. 
 
    목록을 얻으려면 **스토리지** → **영구 볼륨**로 이동하십시오. **Claim** 기준으로 정렬합니다.
 

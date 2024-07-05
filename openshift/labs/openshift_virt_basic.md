@@ -244,40 +244,40 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
    <img src="new_images/29_windows_vm_templates.png" title="100px" alt="윈도우 2019 템플릿"></img> <br>
 <br>
 
-7. **Storage** 섹션에서 다음을 지정합니다.
+5. **Storage** 섹션에서 다음을 지정합니다.
    1. `Boot from CD` 체크박스를 활성화
    2. **CD Source**를 URL로 선택
    3. **Image URL**에 *http://192.168.123.100:81/Windows2019.iso* 를 입력
    4. **Disk size**를 **5GiB**로 설정하여 CD 크기를 줄임
 
-8. **Disk source**를 그대로 두고 하단의 **Disk size**의 값도 기본값인 **60GiB**로 유지합니다.
+6. **Disk source**를 그대로 두고 하단의 **Disk size**의 값도 기본값인 **60GiB**로 유지합니다.
 
-9. `Mount Windows drivers disk`가 활성화되어 있는지 확인합니다. 이는 VirtIO용 드라이버를 제공하는 윈도우 시스템을 설치하는 데 필요합니다.
+7. `Mount Windows drivers disk`가 활성화되어 있는지 확인합니다. 이는 VirtIO용 드라이버를 제공하는 윈도우 시스템을 설치하는 데 필요합니다.
 
    <img src="new_images/31_vm_configurating.png" title="100px" alt="윈도우 2019 템플릿 패러미터"></img> <br>
 <br>
 
 
-10. 매개변수를 입력이 완료되면 **Customize VirtualMachine을**를 누르고, 변경한 이름과 Boot Disk 설정을 확인합니다.
+8. 매개변수를 입력이 완료되면 **Customize VirtualMachine을**를 누르고, 변경한 이름과 Boot Disk 설정을 확인합니다.
 
     <img src="new_images/32_window_vm_setting.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
-11. **Disk** 메뉴에서 Book Disk 순서 변경을 위해 **installation-cdrom**의 맨 끝을 눌러 설정 편집을 진행합니다.
+9. **Disk** 메뉴에서 Book Disk 순서 변경을 위해 **installation-cdrom**의 맨 끝을 눌러 설정 편집을 진행합니다.
     <img src="new_images/32_boot_disk.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
-12. **Use this disk as a boot source**의 체크박스를 선택하고 **Save**를 누릅니다.
+10. **Use this disk as a boot source**의 체크박스를 선택하고 **Save**를 누릅니다.
 
     <img src="new_images/31_boot_disk_order_change.png" title="100px" alt="윈도우 2019 템플릿 패러미터 채우기"></img> <br>
 <br>
 
-13. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
+11. **Scripts** 탭으로 전환하고 `Sysprep` 섹션에서 **Edit**를 누릅니다.
 
     <img src="new_images/33_win_scripts.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 <br>
 
-14. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
+12. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
 
     <img src="new_images/35_win_sysprep.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 
@@ -421,22 +421,22 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
     ```
 <br>
 
-15. 대화 상자에서 **저장(Save)** 을 클릭합니다.
+13. 대화 상자에서 **저장(Save)** 을 클릭합니다.
 
     <img src="new_images/36_win_sysprep_config.png" title="100px" alt="윈도우 2019 템플릿 sysprep"></img> <br>
 <br>
 
-16. **Autounattend.xml answer file**에 설정된 값을 확인 후 **Create VirtualMachine**을 누릅니다.
+14. **Autounattend.xml answer file**에 설정된 값을 확인 후 **Create VirtualMachine**을 누릅니다.
 
     <img src="new_images/37_win_vm_create.png" title="100px" alt="윈도우 2019 가상머신 생성"></img> <br>
 <br>
 
-17. 가상머신은 ISO 이미지를 다운로드하고 인스턴스를 구성 및 시작하여 프로비저닝 프로세스를 시작합니다.
+15. 가상머신은 ISO 이미지를 다운로드하고 인스턴스를 구성 및 시작하여 프로비저닝 프로세스를 시작합니다.
 
     <img src="new_images/40_win_vm_provisioning.png" title="100px" alt="윈도우 2019 프로비저닝"></img> <br>
 <br>
 
-18. 몇 분 후에 가상머신의 Status 값이 `Running`으로 바뀝니다. **Console** 탭으로 전환합니다.
+16. 몇 분 후에 가상머신의 Status 값이 `Running`으로 바뀝니다. **Console** 탭으로 전환합니다.
 
     <img src="new_images/41_win_console.png" title="100px" alt="윈도우 2019 가상머신 콘솔"></img> <br>
 

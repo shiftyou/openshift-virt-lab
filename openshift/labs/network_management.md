@@ -122,26 +122,26 @@ VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본�
 7. (선택 사항) fedora 계정/패스워드로 접속허용을 위해 sshd 설정을 변경합니다.
    **Console** 탭으로 이동하여 터미널에 접속한 후, sudo로 계정을 스위치 합니다.
    
-   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 Console 접속"></img> <br>
+   <img src="new_images/177_fedora_console.png" title="100px" alt="가상머신 Console 접속"></img> <br>
 <br>
 
    **sshd** 설정 변경을 위해 설정 파일을 vi로 오픈합니다.
    ```bash
    vi /etc/ssh/sshd_config
    ```
-   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 설정 파일"></img> <br>
+   <img src="new_images/178_sshd_config.png" title="100px" alt="가상머신 sshd 설정 파일"></img> <br>
 <br>
 
    설정 파일에 **PasswordAuthentication yes** 을 추가합니다.
 
-   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 옵션 추가"></img> <br>
+   <img src="new_images/179_sshd_config_update.png" title="100px" alt="가상머신 sshd 옵션 추가"></img> <br>
 <br>
 
 8. 설정을 저장하고, 반영을 위해 sshd 서비스를 재 시작합니다.
    ```bash
    systemctl restart sshd
    ```
-   <img src="new_images/82_fedora02_console_ip.png" title="100px" alt="가상머신 sshd 재 시작"></img> <br>
+   <img src="new_images/180_sshd_service_restart.png" title="100px" alt="가상머신 sshd 재 시작"></img> <br>
 <br>
 
 
@@ -169,7 +169,7 @@ VM이 현재 **Pod** 네트워킹에 연결된 단일 인터페이스를 기본�
       ```
       
       실행 결과는 다음과 같습니다.
-      <img src="new_images/83_curl.png" title="100px" alt="가상머신의 SSH 연결 확인"></img> <br>
+      <img src="new_images/181_ssh_connect.png" title="100px" alt="가상머신의 SSH 연결 확인"></img> <br>
       
 > [!NOTE]
 > 노드에 할당된 IP를 가지고 기존 IP를 교체합니다.

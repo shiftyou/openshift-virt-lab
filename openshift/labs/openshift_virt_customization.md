@@ -91,7 +91,7 @@
 
 12. 세 개의 수직 점 아이콘을 클릭하여 `default`을 편집하고 기본 옵션을 검토합니다.
 
-    <img src="lnew_images/53_networking_interfaces_default.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션 선택"></img> <br>
+    <img src="new_images/53_networking_interfaces_default.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션 선택"></img> <br>
 
     **Edit network interface** 대화창을 확인합니다.
     <img src="new_images/54_confirm.png" title="100px" alt="가상머신 사용자 정의 네트워킹 인터페이스 옵션"></img> <br>

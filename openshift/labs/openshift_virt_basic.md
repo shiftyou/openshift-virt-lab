@@ -277,7 +277,7 @@ Overview 대시보드는 오픈시프트 가상화 및 가상머신의 상태에
     <img src="new_images/33_win_scripts.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
 <br>
 
-12. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다.
+12. **Autounattend.xml answer file** 양식을 `autounattend.xml`의 코드로 채웁니다. <br>
     **Autonattend.xml**은 Windows 설정 및 사용자 정의 소프트웨어 프로비저닝을 자동화하는 Window용 자동화 도구입니다. 기본적으로 설치 마다 단계가 있는데 이 단계들에 대한 설정 값을 미리 반영함으로써 사용자 입력없이도 자동으로 설치되도록하는 것 입니다. 
 
     <img src="new_images/35_win_sysprep.png" title="100px" alt="윈도우 2019 템플릿 스크립트"></img> <br>
